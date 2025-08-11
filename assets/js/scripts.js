@@ -45,6 +45,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// for work slider in services page
+$(document).ready(function () {
+  $('.security-agent-slider').on('init reInit afterChange', function (event, slick, currentSlide) {
+    $('.slick-dots li').removeClass('animating');
+    $('.slick-dots li.slick-active').addClass('animating');
+  });
+
+  $(".security-agent-slider").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    cssEase: 'ease',
+    responsive: [
+      {
+        breakpoint: 992, // tablets
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 576, // mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
 $(".testimonial-slider").slick({
   dots: false,
   arrows: false,
@@ -75,6 +114,7 @@ $(".testimonial-slider").slick({
     }
   ]
 });
+
 
 // for changing the tab on scroll
 //  $(document).ready(function () {

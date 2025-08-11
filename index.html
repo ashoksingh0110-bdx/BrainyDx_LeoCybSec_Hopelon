@@ -41,86 +41,92 @@
       <section
         class="hero-section position-relative text-center text-white section-padding"
       >
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="./assets/images/banner.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Overlay -->
         <div class="hero-overlay"></div>
 
-        <div class="container">
-          <!-- Badge -->
-          <div
-            class="client-badge mb-4 d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill"
-          >
-            <div class="avatars d-flex">
-              <img
-                src="./assets/images/avatar1.png"
-                alt="client"
-                class="avatar"
-              />
-              <img
-                src="./assets/images/avatar2.png"
-                alt="client"
-                class="avatar"
-              />
-              <img
-                src="./assets/images/avatar3.png"
-                alt="client"
-                class="avatar"
-              />
-              <img
-                src="./assets/images/avatar4.png"
-                alt="client"
-                class="avatar"
-              />
-            </div>
-            <div class="content">
-              <div class="star">★★★★★</div>
-              <p>100+ Satisfied Client</p]>
-            </div>
-          </div>
-
-          <!-- Main Heading -->
-          <h1 class="heading">
-            <span>HOPLON:</span>
-            SMART<br/> CYBERSECURITY MADE SIMPLE</span>
-          </h1>
-          <p class="lead mt-3 mb-4 text-light">
-            Real-time protection, instant alerts, and powerful AI threat
-            detection
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a
-              href="#"
-              class="btn btn-secondary"
-              >BOOK A DEMO</a
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="container">
+            <!-- Badge -->
+            <div
+              class="client-badge mb-4 d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill"
             >
-            <a href="#" class="btn btn-primary"
-              >ENQUIRE NOW</a
-            >
-          </div>
-
-          <!-- Features -->
-          <div
-            class="features-box mt-5 d-flex justify-content-center flex-wrap gap-4 py-4 px-3 rounded-4 shadow"
-          >
-            <div class="feature text-center px-3">
-              <img src="./assets/icons/hex-icon.svg" alt="icon" />
-              <div class="f-content">
-                <h5>8 Security Modules</h5>
-                <p>Total tech protection, zero blind spots</p>
+              <div class="avatars d-flex">
+                <img
+                  src="./assets/images/avatar1.png"
+                  alt="client"
+                  class="avatar"
+                />
+                <img
+                  src="./assets/images/avatar2.png"
+                  alt="client"
+                  class="avatar"
+                />
+                <img
+                  src="./assets/images/avatar3.png"
+                  alt="client"
+                  class="avatar"
+                />
+                <img
+                  src="./assets/images/avatar4.png"
+                  alt="client"
+                  class="avatar"
+                />
+              </div>
+              <div class="content">
+                <div class="star">★★★★★</div>
+                <p>100+ Satisfied Client</p>
               </div>
             </div>
-            <div class="feature text-center px-3">
-              <img src="./assets/icons/hex-icon.svg" alt="icon" />
-              <div class="f-content">
-                <h5>50+ Vendors</h5>
-                <p>Bring your security tools into one platform</p>
-              </div>
+
+            <!-- Main Heading -->
+            <h1 class="heading">
+              <span>HOPLON:</span> SMART<br />CYBERSECURITY MADE SIMPLE
+            </h1>
+            <p class="mt-3 mb-4 text-light para-content">
+              Real-time protection, instant alerts, and powerful AI threat
+              detection
+            </p>
+
+            <!-- CTA Buttons -->
+            <div
+              class="d-block d-md-flex justify-content-center gap-3 flex-wrap"
+            >
+              <a href="#" class="btn btn-secondary w-100 w-lg-fit mb-3 mb-md-0"
+                >BOOK A DEMO</a
+              >
+              <a href="#" class="btn btn-primary w-100 w-lg-fit">ENQUIRE NOW</a>
             </div>
-            <div class="feature text-center px-3">
-              <img src="./assets/icons/hex-icon.svg" alt="icon" />
-              <div class="f-content">
-                <h5>24/7</h5>
-                <p>Threat Monitoring Across All Systems</p>
+
+            <!-- Features -->
+            <div
+              class="features-box mt-5 d-flex justify-content-center flex-wrap gap-4 rounded-4 shadow"
+            >
+              <div class="feature text-center">
+                <img src="./assets/icons/hex-icon.svg" alt="icon" />
+                <div class="f-content">
+                  <h5>8 Security Modules</h5>
+                  <p>Total tech protection, zero blind spots</p>
+                </div>
+              </div>
+              <div class="feature text-center">
+                <img src="./assets/icons/hex-icon.svg" alt="icon" />
+                <div class="f-content">
+                  <h5>50+ Vendors</h5>
+                  <p>Bring your security tools into one platform</p>
+                </div>
+              </div>
+              <div class="feature text-center">
+                <img src="./assets/icons/hex-icon.svg" alt="icon" />
+                <div class="f-content">
+                  <h5>24/7</h5>
+                  <p>Threat Monitoring Across All Systems</p>
+                </div>
               </div>
             </div>
           </div>
@@ -212,13 +218,13 @@
         </div>
       </section>
 
-      <!-- Features Section -->
+      <!-- AI Security Agent Section -->
       <section class="features-section section-padding">
         <div class="gradient-overlay"></div>
         <div class="container content-container">
-          <span class="section-badge badge-primary">
+          <span class="section-badge badge-secondary">
             <img src="./assets/icons/star.png" alt="start" />
-            Problem
+            AI Security Agent for SMBs
           </span>
           <h2 class="section-heading mb-20">
             <span>Meet Hoplon:</span> your 24/7 AI Security Partner
@@ -229,126 +235,270 @@
             in-house security team
           </div>
 
-          <div class="row tab-style-1">
-            <!-- Tabs Header (Left) -->
-            <div class="col-md-6 mb-4 tab-header">
-              <div
-                class="nav flex-column nav-pills gap-4 h-100"
-                id="custom-scroll-tabs"
-              >
-                <a
-                  href="#risk"
-                  class="nav-link active tab-btn d-flex align-items-start gap-3"
+          <!-- for desktop view -->
+          <div class="tab-style-1 d-none d-md-block">
+            <div class="d-flex">
+              <!-- Tabs Header (Left) -->
+              <div class="mb-4 tab-header">
+                <div
+                  class="nav flex-column nav-pills gap-4 h-100"
+                  id="custom-scroll-tabs"
                 >
+                  <a
+                    href="#risk"
+                    class="nav-link active tab-btn d-flex align-items-start gap-3"
+                  >
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4 class="mb-1">
+                        Comprehensive Cybersecurity Risk Insights
+                      </h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="#compliance"
+                    class="nav-link tab-btn d-flex align-items-start gap-3"
+                  >
+                    <img
+                      src="./assets/icons/compliance-readiness.png"
+                      alt="Compliance Readiness"
+                    />
+                    <div class="content">
+                      <h4 class="mb-1">Automated Compliance Readiness</h4>
+                      <p class="mb-0 font-base">
+                        Simplifies meeting regulatory standards.
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="#assistant"
+                    class="nav-link tab-btn d-flex align-items-start gap-3"
+                  >
+                    <img
+                      src="./assets/icons/ai-assistant.png"
+                      alt="AI Assistant"
+                    />
+                    <div class="content">
+                      <h4 class="mb-1">AI Virtual Security Assistant</h4>
+                      <p class="mb-0 font-base">
+                        Real-time threat insights and automated response.
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="#platform"
+                    class="nav-link tab-btn d-flex align-items-start gap-3"
+                  >
+                    <img
+                      src="./assets/icons/platform.png"
+                      alt="Platform Icon"
+                    />
+                    <div class="content">
+                      <h4 class="mb-1">Unified, Scalable Platform</h4>
+                      <p class="mb-0 font-base">
+                        All your security in one place, grows with your
+                        business.
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    href="#cloud"
+                    class="nav-link tab-btn d-flex align-items-start gap-3"
+                  >
+                    <img
+                      src="./assets/icons/email-cloud.png"
+                      alt="Email and Cloud Icon"
+                    />
+                    <div class="content">
+                      <h4 class="mb-1">Email & Cloud Security Insights</h4>
+                      <p class="mb-0 font-base">
+                        Specific protection for critical assets.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Content Sections (Right) -->
+              <div class="">
+                <div id="risk" class="content-section py-5">
                   <img
-                    src="./assets/icons/risk-insights.png"
-                    alt="Risk Insights"
+                    src="./assets/images/risk-insights-img.png"
+                    alt="Risk Insights Image"
+                    class="img-fluid"
                   />
-                  <div class="content">
-                    <h4 class="mb-1">
-                      Comprehensive Cybersecurity Risk Insights
-                    </h4>
-                    <p class="mb-0 font-base">
-                      Proactive identification and analysis of vulnerabilities.
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#compliance"
-                  class="nav-link tab-btn d-flex align-items-start gap-3"
-                >
+                </div>
+                <div id="compliance" class="content-section py-5">
                   <img
-                    src="./assets/icons/compliance-readiness.png"
-                    alt="Compliance Readiness"
+                    src="./assets/images/risk-insights-img.png"
+                    alt="Compliance Readiness Image"
+                    class="img-fluid"
                   />
-                  <div class="content">
-                    <h4 class="mb-1">Automated Compliance Readiness</h4>
-                    <p class="mb-0 font-base">
-                      Simplifies meeting regulatory standards.
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#assistant"
-                  class="nav-link tab-btn d-flex align-items-start gap-3"
-                >
+                </div>
+                <div id="assistant" class="content-section py-5">
                   <img
-                    src="./assets/icons/ai-assistant.png"
-                    alt="AI Assistant"
+                    src="./assets/images/risk-insights-img.png"
+                    alt="AI Assistant Image"
+                    class="img-fluid"
                   />
-                  <div class="content">
-                    <h4 class="mb-1">AI Virtual Security Assistant</h4>
-                    <p class="mb-0 font-base">
-                      Real-time threat insights and automated response.
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#platform"
-                  class="nav-link tab-btn d-flex align-items-start gap-3"
-                >
-                  <img src="./assets/icons/platform.png" alt="Platform Icon" />
-                  <div class="content">
-                    <h4 class="mb-1">Unified, Scalable Platform</h4>
-                    <p class="mb-0 font-base">
-                      All your security in one place, grows with your business.
-                    </p>
-                  </div>
-                </a>
-                <a
-                  href="#cloud"
-                  class="nav-link tab-btn d-flex align-items-start gap-3"
-                >
+                </div>
+                <div id="platform" class="content-section py-5">
                   <img
-                    src="./assets/icons/email-cloud.png"
-                    alt="Email and Cloud Icon"
+                    src="./assets/images/risk-insights-img.png"
+                    alt="Platform Image"
+                    class="img-fluid"
                   />
-                  <div class="content">
-                    <h4 class="mb-1">Email & Cloud Security Insights</h4>
-                    <p class="mb-0 font-base">
-                      Specific protection for critical assets.
-                    </p>
-                  </div>
-                </a>
+                </div>
+                <div id="cloud" class="content-section py-5">
+                  <img
+                    src="./assets/images/risk-insights-img.png"
+                    alt="Cloud Image"
+                    class="img-fluid"
+                  />
+                </div>
               </div>
             </div>
+          </div>
 
-            <!-- Content Sections (Right) -->
-            <div class="col-md-6">
-              <div id="risk" class="content-section py-5">
-                <img
-                  src="./assets/images/risk-insights-img.png"
-                  alt="Risk Insights Image"
-                  class="img-fluid"
-                />
+          <!-- slider for mobile -->
+          <!-- Security Agent Slider -->
+          <div class="security-agent-slider-container" style="overflow: none;">
+            <div class="security-agent-slider">
+              <!-- Slide 1 -->
+              <div class="security-agent-slide">
+                <div class="agent-card">
+                  <div class="image-box">
+                    <img
+                      src="./assets/images/m-risk-insights.png"
+                      alt="Risk Insights Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="nav-link tab-btn">
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4>Comprehensive Cybersecurity Risk Insights</h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="compliance" class="content-section py-5">
-                <img
-                  src="./assets/images/risk-insights-img.png"
-                  alt="Compliance Readiness Image"
-                  class="img-fluid"
-                />
+
+              <!-- Slide 2 -->
+              <div class="security-agent-slide">
+                <div class="agent-card">
+                  <div class="image-box">
+                    <img
+                      src="./assets/images/m-risk-insights.png"
+                      alt="Risk Insights Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="nav-link tab-btn">
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4>Comprehensive Cybersecurity Risk Insights</h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="assistant" class="content-section py-5">
-                <img
-                  src="./assets/images/risk-insights-img.png"
-                  alt="AI Assistant Image"
-                  class="img-fluid"
-                />
+
+              <!-- Slide 3 -->
+              <div class="security-agent-slide">
+                <div class="agent-card">
+                  <div class="image-box">
+                    <img
+                      src="./assets/images/m-risk-insights.png"
+                      alt="Risk Insights Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="nav-link tab-btn">
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4>Comprehensive Cybersecurity Risk Insights</h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="platform" class="content-section py-5">
-                <img
-                  src="./assets/images/risk-insights-img.png"
-                  alt="Platform Image"
-                  class="img-fluid"
-                />
+
+              <!-- Slide 1 -->
+              <div class="security-agent-slide">
+                <div class="agent-card">
+                  <div class="image-box">
+                    <img
+                      src="./assets/images/m-risk-insights.png"
+                      alt="Risk Insights Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="nav-link tab-btn">
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4>Comprehensive Cybersecurity Risk Insights</h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="cloud" class="content-section py-5">
-                <img
-                  src="./assets/images/risk-insights-img.png"
-                  alt="Cloud Image"
-                  class="img-fluid"
-                />
+
+              <!-- Slide 2 -->
+              <div class="security-agent-slide">
+                <div class="agent-card">
+                  <div class="image-box">
+                    <img
+                      src="./assets/images/m-risk-insights.png"
+                      alt="Risk Insights Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="nav-link tab-btn">
+                    <img
+                      src="./assets/icons/risk-insights.png"
+                      alt="Risk Insights"
+                    />
+                    <div class="content">
+                      <h4>Comprehensive Cybersecurity Risk Insights</h4>
+                      <p class="mb-0 font-base">
+                        Proactive identification and analysis of
+                        vulnerabilities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -358,7 +508,7 @@
       <!-- Benefits Section -->
       <section class="benefits-section section-padding">
         <div class="overlay benefits-overlay"></div>
-        <div class="container position-relative">
+        <div class="container">
           <!-- Section Header -->
           <div class="text-center mb-5">
             <span class="section-badge badge-secondary">
@@ -367,7 +517,7 @@
             </span>
             <div class="row">
               <div class="col-md-6">
-                <h2 class="section-heading" style="text-align: left;">
+                <h2 class="section-heading" style="text-align: left">
                   <span>WHY HOPLON?</span> SECURITY IN MINUTES, NOT MONTHS
                 </h2>
               </div>
@@ -381,122 +531,148 @@
           </div>
 
           <!-- Cards Wrapper -->
-          <div class="benefit-card">
-            <div class="left-tabs">
-              <button class="tab active">Cost Efficiency</button>
-              <button class="tab">10-Minutes Setup</button>
-              <button class="tab">Compliance</button>
-              <button class="tab">Incident Status</button>
-            </div>
-            <div class="card-content">
-              <div class="card-image">
-                <img
-                  src="./assets/images/benefit-cost.png"
-                  alt="Cost Efficiency"
-                />
+          <div class="benefit-cards-wrapper d-none d-md-block">
+            <div class="benefit-card">
+              <div class="left-tabs">
+                <button class="tab active">Cost Efficiency</button>
+                <button class="tab">10-Minutes Setup</button>
+                <button class="tab">Compliance</button>
+                <button class="tab">Incident Status</button>
               </div>
-              <div class="card-text">
-                <div>
-                  <h3>Enterprise-grade protection, SMB-friendly pricing.</h3>
+              <div class="card-content">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/benefit-cost.png"
+                    alt="Cost Efficiency"
+                  />
                 </div>
-                <div>
-                  <p>
-                    Our subscription packages let you pay only for what you
-                    need, making cybersecurity affordable for SMBs and lowering
-                    costs.
-                  </p>
-                  <a href="#" class="btn btn-secondary">BOOK A DEMO <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow"/></a>
+                <div class="card-text">
+                  <div>
+                    <h3>Enterprise-grade protection, SMB-friendly pricing.</h3>
+                  </div>
+                  <div>
+                    <p>
+                      Our subscription packages let you pay only for what you
+                      need, making cybersecurity affordable for SMBs and
+                      lowering costs.
+                    </p>
+                    <a href="#" class="btn btn-secondary"
+                      >BOOK A DEMO
+                      <img
+                        class="icon end"
+                        src="./assets/icons/arrow-right.png"
+                        alt="arrow"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Repeat card with different tab active -->
-          <div class="benefit-card">
-            <div class="left-tabs">
-              <button class="tab">Cost Efficiency</button>
-              <button class="tab active">10-Minutes Setup</button>
-              <button class="tab">Compliance</button>
-              <button class="tab">Incident Status</button>
-            </div>
-            <div class="card-content">
-              <div class="card-image">
-                <img
-                  src="./assets/images/benefit-setup.png"
-                  alt="10 Minutes Setup"
-                />
+            <div class="benefit-card">
+              <div class="left-tabs">
+                <button class="tab">Cost Efficiency</button>
+                <button class="tab active">10-Minutes Setup</button>
+                <button class="tab">Compliance</button>
+                <button class="tab">Incident Status</button>
               </div>
-              <div class="card-text">
-                <div>
-                  <h3>Build Your Cybersecurity Program in Just 10 Minutes</h3>
+              <div class="card-content">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/benefit-setup.png"
+                    alt="10 Minutes Setup"
+                  />
                 </div>
-                <div>
-                  <p>
-                    Skip the complexity. Our streamlined setup gets your entire
-                    organization protected in 10 minutes, not 10 days.
-                  </p>
-                  <a href="#" class="btn btn-secondary">BOOK A DEMO <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow"/></a>
+                <div class="card-text">
+                  <div>
+                    <h3>Build Your Cybersecurity Program in Just 10 Minutes</h3>
+                  </div>
+                  <div>
+                    <p>
+                      Skip the complexity. Our streamlined setup gets your
+                      entire organization protected in 10 minutes, not 10 days.
+                    </p>
+                    <a href="#" class="btn btn-secondary"
+                      >BOOK A DEMO
+                      <img
+                        class="icon end"
+                        src="./assets/icons/arrow-right.png"
+                        alt="arrow"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="benefit-card">
-            <div class="left-tabs">
-              <button class="tab">Cost Efficiency</button>
-              <button class="tab">10-Minutes Setup</button>
-              <button class="tab active">Compliance</button>
-              <button class="tab">Incident Status</button>
-            </div>
-            <div class="card-content">
-              <div class="card-image">
-                <img
-                  src="./assets/images/benefit-compliance.png"
-                  alt="Compliance"
-                />
+            <div class="benefit-card">
+              <div class="left-tabs">
+                <button class="tab">Cost Efficiency</button>
+                <button class="tab">10-Minutes Setup</button>
+                <button class="tab active">Compliance</button>
+                <button class="tab">Incident Status</button>
               </div>
-              <div class="card-text">
-                <div>
-                  <h3>Compliance on autopilot.</h3>
+              <div class="card-content">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/benefit-compliance.png"
+                    alt="Compliance"
+                  />
                 </div>
-                <div>
-                  <p>
-                    Hoplon automates the entire compliance lifecycle—monitoring
-                    controls, collecting evidence, and generating real-time
-                    reports across standards like ISO 27001, GDPR, and NIS2.
-                  </p>
-                  <a href="#" class="btn btn-secondary">BOOK A DEMO <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow"/></a>
+                <div class="card-text">
+                  <div>
+                    <h3>Compliance on autopilot.</h3>
+                  </div>
+                  <div>
+                    <p>
+                      Hoplon automates the entire compliance
+                      lifecycle—monitoring controls, collecting evidence, and
+                      generating real-time reports across standards like ISO
+                      27001, GDPR, and NIS2.
+                    </p>
+                    <a href="#" class="btn btn-secondary"
+                      >BOOK A DEMO
+                      <img
+                        class="icon end"
+                        src="./assets/icons/arrow-right.png"
+                        alt="arrow"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="benefit-card">
-            <div class="left-tabs">
-              <button class="tab">Cost Efficiency</button>
-              <button class="tab">10-Minutes Setup</button>
-              <button class="tab">Compliance</button>
-              <button class="tab active">Incident Status</button>
-            </div>
-            <div class="card-content">
-              <div class="card-image">
-                <img
-                  src="./assets/images/benefit-incidents.png"
-                  alt="Incident Status"
-                />
+            <div class="benefit-card">
+              <div class="left-tabs">
+                <button class="tab">Cost Efficiency</button>
+                <button class="tab">10-Minutes Setup</button>
+                <button class="tab">Compliance</button>
+                <button class="tab active">Incident Status</button>
               </div>
-              <div class="card-text">
-                <div>
-                  <h3>Real-time alerting for what really matters</h3>
+              <div class="card-content">
+                <div class="card-image">
+                  <img
+                    src="./assets/images/benefit-incidents.png"
+                    alt="Incident Status"
+                  />
                 </div>
-                <div>
-                  <p>
-                    We leverage advanced AI to continuously correlate data
-                    across endpoints, cloud, email, and user behavior—delivering
-                    accurate, actionable insights right to your preferred
-                    channels.
-                  </p>
-                  <a href="#" class="btn btn-secondary">BOOK A DEMO <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow"/></a>
+                <div class="card-text">
+                  <div>
+                    <h3>Real-time alerting for what really matters</h3>
+                  </div>
+                  <div>
+                    <p>
+                      We leverage advanced AI to continuously correlate data
+                      across endpoints, cloud, email, and user
+                      behavior—delivering accurate, actionable insights right to
+                      your preferred channels.
+                    </p>
+                    <a href="#" class="btn btn-secondary"
+                      >BOOK A DEMO
+                      <img
+                        class="icon end"
+                        src="./assets/icons/arrow-right.png"
+                        alt="arrow"
+                    /></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -505,7 +681,32 @@
       </section>
 
       <!-- How Hopelon Works Section -->
-      
+      <section class="how-hoplon-works section-padding">
+        <div class="howhoplon-bg">
+          <img
+            src="./assets/images/how-hopelon-works-bg.jpg"
+            alt="How Hoplon Works"
+            class="bg-image"
+          />
+          <div class="overlay"></div>
+          <div class="title-box">
+            <span class="section-badge badge-secondary">
+              <img src="./assets/icons/star.png" alt="process icon" />
+              Simplified Process
+            </span>
+            <h2 class="section-heading">HOW HOPLON WORKS</h2>
+          </div>
+        </div>
+
+        <!-- Replace this div with your GIF -->
+        <div class="howhoplon-gif">
+          <img
+            src="./assets/images/how-hopelon-works.gif"
+            alt="Hoplon Process Animation"
+          />
+        </div>
+      </section>
+
       <!-- Contact us Section -->
       <section class="contact-us-section section-padding">
         <div class="overlay contact-overlay"></div>
@@ -559,7 +760,11 @@
                   <strong>Join our community</strong> to share tips, ask
                   questions, and connect with fellow users.
                 </p>
-                <a href="#" class="btn-outlined btn-outlined-primary mt-40 d-block w-100">JOIN US</a>
+                <a
+                  href="#"
+                  class="btn-outlined btn-outlined-primary mt-40 d-block w-100"
+                  >JOIN US</a
+                >
               </div>
             </div>
 
@@ -949,38 +1154,71 @@
 
           <!-- Stats -->
           <div class="row gap-32 mt-40">
-            <div class="col-6 col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="stat-card">
                 <div class="stat-circle">70%</div>
-                <h4>Save Cost</h4>
-                <p>Up to 70% saving cost</p>
+                <div class="content">
+                  <h4>Save Cost</h4>
+                  <p>Up to 70% saving cost</p>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="stat-card">
                 <div class="stat-circle">75%</div>
-                <h4>Compliance Readiness</h4>
-                <p>Saving time and resources up to 75%</p>
+                <div class="content">
+                  <h4>Compliance Readiness</h4>
+                  <p>Saving time and resources up to 75%</p>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="stat-card">
                 <div class="stat-circle">90%</div>
-                <h4>Mitigating Cyber Exposure</h4>
-                <p>90% risk reduction</p>
+                <div class="content">
+                  <h4>Mitigating Cyber Exposure</h4>
+                  <p>90% risk reduction</p>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-md-6 col-lg-3">
               <div class="stat-card">
                 <div class="stat-circle">5 min</div>
-                <h4>Fast Onboarding</h4>
-                <p>Save up to 160+ hours</p>
+                <div class="content">
+                  <h4>Fast Onboarding</h4>
+                  <p>Save up to 160+ hours</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- sidebar -->
+    <div
+      class="sidebar offcanvas offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="demoOffcanvas"
+    >
+      <div class="offcanvas-header">
+        <img
+          src="assets/images/logo.png"
+          alt="Tech Prodigy Logo"
+          class="logo"
+        />
+        <button
+          type="button"
+          class="btn-close text-light"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <a href="#" class="btn btn-secondary w-100 mb-3">BOOK A DEMO</a>
+        <a href="#" class="btn btn-primary w-100">ENQUIRE NOW</a>
+      </div>
+    </div>
 
     <!-- Footer -->
     <div id="footer"></div>
