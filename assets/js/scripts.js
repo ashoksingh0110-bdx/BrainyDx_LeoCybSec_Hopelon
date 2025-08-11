@@ -1,16 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // to add active class in navbar links
-  const currentPath = window.location.pathname.replace(/^\/+/, ''); // removes leading slash
-  document.querySelectorAll(".navbar-nav .nav-item").forEach((navItem) => {
-    const link = navItem.querySelector("a.nav-link");
-    if (link) {
-      const href = link.getAttribute("href").replace(/^\/+/, ''); // removes leading slash
-      if (href === currentPath) {
-        navItem.classList.add("active");
-      }
-    }
-  });
-
   const inject = async (id, file) => {
     const target = document.getElementById(id);
     if (target) {
@@ -117,49 +105,49 @@ $(".testimonial-slider").slick({
 
 
 // for changing the tab on scroll
-//  $(document).ready(function () {
-//     const contentSections = $('.content-section');
-//     const navigation = $('#custom-scroll-tabs');
+ $(document).ready(function () {
+    const contentSections = $('.content-section');
+    const navigation = $('#custom-scroll-tabs');
 
-//     // Smooth scroll on click
-//     navigation.on('click', 'a', function (e) {
-//       e.preventDefault();
-//       scrollToTarget($(this).attr('href'));
-//     });
+    // Smooth scroll on click
+    navigation.on('click', 'a', function (e) {
+      e.preventDefault();
+      scrollToTarget($(this).attr('href'));
+    });
 
-//     // Update nav highlight on scroll
-//     $(window).on('scroll', function () {
-//       updateActiveTab();
-//     });
+    // Update nav highlight on scroll
+    $(window).on('scroll', function () {
+      updateActiveTab();
+    });
 
-//     // Initial state
-//     updateActiveTab();
+    // Initial state
+    updateActiveTab();
 
-//     function updateActiveTab() {
-//       contentSections.each(function () {
-//         const section = $(this);
-//         const sectionId = section.attr('id');
-//         const link = navigation.find(`a[href="#${sectionId}"]`);
+    function updateActiveTab() {
+      contentSections.each(function () {
+        const section = $(this);
+        const sectionId = section.attr('id');
+        const link = navigation.find(`a[href="#${sectionId}"]`);
 
-//         if (
-//           section.offset().top - $(window).height() / 2 < $(window).scrollTop() &&
-//           section.offset().top + section.outerHeight() - $(window).height() / 2 > $(window).scrollTop()
-//         ) {
-//           navigation.find('a').removeClass('active');
-//           link.addClass('active');
-//         }
-//       });
-//     }
+        if (
+          section.offset().top - $(window).height() / 2 < $(window).scrollTop() &&
+          section.offset().top + section.outerHeight() - $(window).height() / 2 > $(window).scrollTop()
+        ) {
+          navigation.find('a').removeClass('active');
+          link.addClass('active');
+        }
+      });
+    }
 
-//     function scrollToTarget(selector) {
-//       const target = $(selector);
-//       if (target.length) {
-//         $('html, body').animate(
-//           {
-//             scrollTop: target.offset().top - 100, // adjust offset if header overlaps
-//           },
-//           800
-//         );
-//       }
-//     }
-//   });
+    function scrollToTarget(selector) {
+      const target = $(selector);
+      if (target.length) {
+        $('html, body').animate(
+          {
+            scrollTop: target.offset().top - 100, // adjust offset if header overlaps
+          },
+          800
+        );
+      }
+    }
+  });

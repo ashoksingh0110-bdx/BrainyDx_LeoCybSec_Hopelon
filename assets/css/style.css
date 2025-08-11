@@ -899,7 +899,7 @@ footer .certification p {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0; /* base layer */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .features-section .content-container {
@@ -920,13 +920,13 @@ footer .certification p {
 .features-section .tab-style-1 {
   align-items: flex-start; /* ensure sticky works properly */
 }
-.agent-card{
+.agent-card {
 }
 
 .agent-card .nav-link {
   position: relative;
   margin-top: -6rem;
-  background: #2E1F7A;
+  background: #2e1f7a;
   padding: 1.5rem 2rem;
   border-radius: 1.5rem;
   border: 1px solid #7b68d933;
@@ -966,8 +966,7 @@ footer .certification p {
   height: 100%;
 }
 
-
-.agent-card img{
+.agent-card img {
   height: 247px;
 }
 .gradient-overlay {
@@ -1407,30 +1406,14 @@ footer .certification p {
 /* How hopelon works */
 /* Root container */
 .how-hoplon-works {
-  background-image: url("../images/how-hopelon-works-bg.jpg");
+  /* background-image: url("../images/how-hopelon-works-bg.jpg"); */
+  background: url("../images/how-hopelon-works-bg.jpg") no-repeat;
+  background-size: cover; /* each image covers half height */
+  background-position: top center, bottom center; /* first image at top, second at bottom */
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
-/* Background image & overlay */
-.how-hoplon-works .howhoplon-bg {
-  position: relative;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.how-hoplon-works .howhoplon-bg .bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .how-hoplon-works .howhoplon-bg .overlay {
   position: absolute;
@@ -1443,6 +1426,7 @@ footer .certification p {
 
 /* Title box */
 .how-hoplon-works .title-box {
+  width: fit-content;
   background: #2e1f7a66;
   position: relative;
   z-index: 2;
@@ -1452,6 +1436,7 @@ footer .certification p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 7.5rem;
 }
 
 .how-hoplon-works .title-box h2 {
@@ -1555,6 +1540,27 @@ footer .certification p {
   }
   .contact-us-section .contact-card {
     padding: 1rem;
+  }
+  .email-label,
+  .socials-label {
+    text-align: left;
+  }
+  .industries-section .industry-card .icon img {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+  .industries-section .industry-card {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2rem;
+  }
+  .industry-cards-row {
+    padding-left: 2.25rem;
+  }
+  .industries-section .heading-section .icon-animation {
+    height: 3.5rem;
+    width: 3.5rem;
+    top: -1rem;
+    right: -1rem;
   }
 }
 
