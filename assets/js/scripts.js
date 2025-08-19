@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+
 });
 
 
@@ -95,7 +97,7 @@ $(".testimonial-slider").slick({
     {
       breakpoint: 992, // tablets
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     },
@@ -148,38 +150,38 @@ $(document).ready(function () {
   });
 
   // When slider changes, update active tab
-$(".benefit-cards-slider").on("afterChange", function (event, slick, currentSlide) {
-  $(".tab-btn").removeClass("active");
-  let $activeTab = $('.tab-btn[data-slide="' + currentSlide + '"]').addClass("active");
+  $(".benefit-cards-slider").on("afterChange", function (event, slick, currentSlide) {
+    $(".tab-btn").removeClass("active");
+    let $activeTab = $('.tab-btn[data-slide="' + currentSlide + '"]').addClass("active");
 
-  // Scroll horizontally inside .left-tabs so active tab stays visible
-  let $tabsWrapper = $(".left-tabs");
-  let tab = $activeTab[0];
-  let wrapper = $tabsWrapper[0];
+    // Scroll horizontally inside .left-tabs so active tab stays visible
+    let $tabsWrapper = $(".left-tabs");
+    let tab = $activeTab[0];
+    let wrapper = $tabsWrapper[0];
 
-  // Calculate how far to scroll
-  let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
+    // Calculate how far to scroll
+    let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
 
-  $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400); // smooth scroll
-});
+    $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400); // smooth scroll
+  });
 
-// When tab is clicked, go to respective slide
-$(".tab-btn").on("click", function () {
-  var slideIndex = $(this).data("slide");
-  $(".benefit-cards-slider").slick("slickGoTo", slideIndex);
+  // When tab is clicked, go to respective slide
+  $(".tab-btn").on("click", function () {
+    var slideIndex = $(this).data("slide");
+    $(".benefit-cards-slider").slick("slickGoTo", slideIndex);
 
-  // Update active tab
-  $(".tab-btn").removeClass("active");
-  $(this).addClass("active");
+    // Update active tab
+    $(".tab-btn").removeClass("active");
+    $(this).addClass("active");
 
-  // Scroll horizontally inside .left-tabs
-  let $tabsWrapper = $(".left-tabs");
-  let tab = this;
-  let wrapper = $tabsWrapper[0];
-  let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
+    // Scroll horizontally inside .left-tabs
+    let $tabsWrapper = $(".left-tabs");
+    let tab = this;
+    let wrapper = $tabsWrapper[0];
+    let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
 
-  $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400);
-});
+    $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400);
+  });
 
 });
 
@@ -293,3 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// to scroll to section on nav button click
+// function scrollToSection(sectionid) {
+//   const section = document.getElementById(sectionid);
+//   if (section) {
+//     section.scrollIntoView({ behavior: "smooth", block: "start" });
+//   }
+// }
