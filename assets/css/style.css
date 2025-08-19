@@ -8,6 +8,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  background-color: #170f3d;
 }
 
 /* for testing */
@@ -216,20 +217,18 @@ p {
   --btn-move: calc(100% + 0.5rem);
 }
 .btn .icon {
-  height: 1rem !important;
+  height: 1rem;
+  width: 1rem;
   align-self: center;
   vertical-align: middle;
 }
 .btn .icon.end {
-  height: 1rem;
-  width: 1rem;
-}
-.btn .icon.start {
   margin-left: 0.5rem;
 }
-.btn img.icon-start {
+.btn .icon.start {
   margin-right: 0.5rem;
 }
+
 .btn-primary {
   background-color: var(--primary-500);
   color: var(--text-white);
@@ -474,7 +473,7 @@ p {
   color: var(--text-primary-300);
 }
 .section-content {
-  font-size: var(--font-xl);
+  font-size: var(--font-lg);
   font-weight: var(--font-regular);
   color: var(--text-gray-200);
 }
@@ -664,7 +663,7 @@ footer .certification p {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
-.social-icon{
+.social-icon {
   text-decoration: none;
 }
 .email-label img {
@@ -757,9 +756,11 @@ footer .certification p {
   color: var(--text-primary-300);
 }
 .hero-section .client-badge {
-  background: rgba(255, 255, 255, 0.1);
+  background: #6854cd33;
   backdrop-filter: blur(10px);
   border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 2.5rem;
 }
 .hero-section .client-badge .content {
   margin-left: 0.75rem;
@@ -768,11 +769,18 @@ footer .certification p {
   text-align: left;
   color: var(--text-gray-100);
   margin-bottom: 0;
+  font-size: 0.825rem;
+}
+.hero-section .para-content {
+  font-size: 1.25rem;
+  max-width: 498px;
+  text-align: center;
 }
 .client-badge .content .star {
   font-size: 1rem;
   text-align: left;
   color: #ffe139;
+  line-height: 1rem;
 }
 .hero-section .avatar {
   width: 32px;
@@ -864,6 +872,9 @@ footer .certification p {
 .home-page .problem-section {
   background: var(--primary-600);
   position: relative;
+}
+.problem-section .row {
+  padding-left: 1.5rem;
 }
 .problem-section .card-style-1 {
   /* min-height: 160px; */
@@ -1031,7 +1042,9 @@ footer .certification p {
   /* border: 1px solid var(--primary-300); */
   /* border-radius: 1rem; */
 }
-
+.security-agent-slider {
+  /* overflow: hidden; */
+}
 .agent-card .nav-link {
   position: relative;
   margin-top: -6rem;
@@ -1079,12 +1092,14 @@ footer .certification p {
   width: 100%;
 }
 .agent-card .image-box img {
-  height: 247px;
+  /* height: 247px; */
+  height: auto;
   width: 100%;
   border-radius: 0;
 }
 /* dots styling for security agent slider */
-.security-agent-slider .slick-dots {
+.security-agent-slider .slick-dots,
+.benefit-cards-slider .slick-dots {
   position: absolute;
   bottom: -2rem;
   left: 50%;
@@ -1098,7 +1113,8 @@ footer .certification p {
   list-style: none;
 }
 
-.security-agent-slider .slick-dots li {
+.security-agent-slider .slick-dots li,
+.benefit-cards-slider .slick-dots li {
   width: 8px;
   height: 8px;
   background: var(--gray-700);
@@ -1109,12 +1125,14 @@ footer .certification p {
   margin: 0;
 }
 
-.security-agent-slider .slick-dots li.slick-active {
+.security-agent-slider .slick-dots li.slick-active,
+.benefit-cards-slider .slick-dots li.slick-active {
   width: 45px;
   background: var(--primary-200);
 }
 
-.security-agent-slider .slick-dots li button {
+.security-agent-slider .slick-dots li button,
+.benefit-cards-slider .slick-dots li button {
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -1190,8 +1208,8 @@ footer .certification p {
   transition: all 0.3s ease;
   cursor: auto;
 }
-
-.left-tabs .tab.active {
+.left-tabs .tab.active,
+.benefit-cards-wrapper-m .left-tabs .tab.active {
   background: #5e54df;
   color: #fff;
   border-color: #5e54df;
@@ -1208,6 +1226,39 @@ footer .certification p {
   justify-content: space-between;
   min-width: 250px;
 }
+.benefit-cards-wrapper-m .left-tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding-inline: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.benefit-cards-wrapper-m .left-tabs > * {
+  scroll-snap-align: start;
+}
+
+.benefit-cards-wrapper-m .left-tabs .tab {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: auto;
+  white-space: nowrap;
+}
+.benefit-cards-slider .slick-slide {
+  padding: 0 0.625rem 0 0;
+}
+
 .card-image img {
   height: 408px;
   /* border-radius: 1rem; */
@@ -1451,7 +1502,7 @@ footer .certification p {
 }
 
 .testimonials-section {
-  background-color: #1b1134;
+  background-color: #170f3d;
   color: #fff;
 }
 
@@ -1664,12 +1715,32 @@ footer .certification p {
   line-height: 2rem;
   margin-bottom: 1rem;
 }
+.how-hoplon-works-m .hexagon-outer {
+  display: inline-block;
+  position: relative;
+}
+
 .how-hoplon-works-m .hexagon-wrapper {
   display: inline-flex;
   padding: 2px; /* border thickness */
   background: #d4514b; /* border color */
   clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
   margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.how-hoplon-works-m .hexagon-outer::before {
+  position: absolute;
+  top: -0.5rem; /* adjust how much it goes above */
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--secondary-500);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .how-hoplon-works-m .hexagon {
@@ -1681,7 +1752,6 @@ footer .certification p {
   justify-content: center;
   align-items: center;
 }
-
 .how-hoplon-works-m .hexagon img {
   width: 52px;
   height: 52px;
@@ -1707,9 +1777,8 @@ footer .certification p {
 }
 
 .how-hoplon-works-m .arrow {
-
 }
-.how-hoplon-works-m .arrow img{
+.how-hoplon-works-m .arrow img {
   margin-top: 1.5rem;
   height: 2.5rem;
 }
@@ -1765,9 +1834,19 @@ footer .certification p {
     flex-direction: row;
     justify-content: start;
   }
+  .stat-card h4 {
+    font-size: 1rem;
+  }
   .stat-circle {
-    margin: 0 2rem 0 1rem;
+    width: 58px;
+    height: 58px;
+    margin: 0 1rem 0 0;
     padding: 1.25rem;
+    font-size: 1rem;
+  }
+  .stat-circle::after {
+    width: 65px;
+    height: 65px;
   }
   .stat-card .content {
     text-align: left;
@@ -1835,14 +1914,15 @@ footer .certification p {
     right: -1rem;
   }
   .cta-section-container {
-    background: url("../images/cta-bg.png"),
-      linear-gradient(to bottom, #130d31 0%, transparent 30%);
-    background-size: contain;
-    background-position: top center;
+    /* background: url("../images/cta-bg.png"),
+      linear-gradient(to bottom, #170f3d 30%); */
+    background: url("../images/cta.webp");
+    background-size: cover;
+    /* background-position: top center; */
     background-repeat: no-repeat;
-    padding: 174px 1.5rem 1.5rem 1.5rem !important;
-    border-radius: 20px; /* add your radius */
-    overflow: hidden; /* ensures bg respects radius */
+    padding: 9rem 1.5rem 1.5rem 1.5rem !important;
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
   }
   .cta-section .cta-wrapper {
     padding: 0.75rem;
@@ -1873,10 +1953,10 @@ footer .certification p {
     text-align: start;
   }
   .how-hoplon-works-m {
-    background: url("../images/how-hoplon-works.jpg") top center / 100% 20%
-        no-repeat,
-      #130d31; /* fallback solid color */
-    background-position: top center;
+    background: url("../images/how-hopelon-works-m-bg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .form-container-row {
     flex-direction: row;
@@ -1886,6 +1966,52 @@ footer .certification p {
   }
   .contact-us-section .right-col {
     width: 100%;
+  }
+  .testimonial-slider-container .icon-animation {
+    height: 5rem;
+    top: -4.5rem;
+    left: -1rem;
+  }
+  .benefit-cards-wrapper-m {
+    overflow: hidden;
+  }
+  .benefit-cards-slider {
+    overflow: hidden;
+  }
+  .benefit-cards-slider .slick-dots {
+    bottom: 0rem;
+  }
+  .benefit-card {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    height: 100%;
+  }
+  .benefit-card .card-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 550px;
+  }
+  .card-image img {
+    height: 100%;
+    width: 100%;
+  }
+  .benefit-card .card-text h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-regular);
+  }
+  .benefit-card .card-text p {
+    font-size: 0.825rem;
+    font-weight: var(--font-light);
+  }
+  .benefit-card .btn {
+    display: flex;
+  }
+  .benefit-section-text {
+    font-size: 1rem;
+    font-weight: var(--font-regular);
   }
 }
 
@@ -1941,9 +2067,19 @@ footer .certification p {
     flex-direction: row;
     justify-content: start;
   }
+  .stat-card h4 {
+    font-size: 1rem;
+  }
   .stat-circle {
-    margin: 0 2rem 0 1rem;
+    width: 58px;
+    height: 58px;
+    margin: 0 1rem 0 0;
     padding: 1.25rem;
+    font-size: 1rem;
+  }
+  .stat-circle::after {
+    width: 65px;
+    height: 65px;
   }
   .stat-card .content {
     text-align: left;
@@ -2008,14 +2144,15 @@ footer .certification p {
     right: -1rem;
   }
   .cta-section-container {
-    background: url("../images/cta-bg.png"),
-      linear-gradient(to bottom, #130d31 0%, transparent 30%);
-    background-size: contain;
-    background-position: top center;
+    /* background: url("../images/cta-bg.png"),
+      linear-gradient(to bottom, #170f3d 30%); */
+    background: url("../images/cta.webp");
+    background-size: cover;
+    /* background-position: top center; */
     background-repeat: no-repeat;
-    padding: 174px 1.5rem 1.5rem 1.5rem !important;
-    border-radius: 20px; /* add your radius */
-    overflow: hidden; /* ensures bg respects radius */
+    padding: 9rem 1.5rem 1.5rem 1.5rem !important;
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
   }
   .cta-section .cta-wrapper {
     padding: 0.75rem;
@@ -2060,6 +2197,52 @@ footer .certification p {
   .contact-us-section .right-col {
     width: 100%;
   }
+  .testimonial-slider-container .icon-animation {
+    height: 5rem;
+    top: -4.5rem;
+    left: -1rem;
+  }
+  .benefit-cards-wrapper-m {
+    overflow: hidden;
+  }
+  .benefit-cards-slider {
+    overflow: hidden;
+  }
+  .benefit-cards-slider .slick-dots {
+    bottom: 0rem;
+  }
+  .benefit-card {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    height: 100%;
+  }
+  .benefit-card .card-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 550px;
+  }
+  .card-image img {
+    height: 100%;
+    width: 100%;
+  }
+  .benefit-card .card-text h3 {
+    font-size: 1.25rem;
+    font-weight: var(--font-regular);
+  }
+  .benefit-card .card-text p {
+    font-size: 0.825rem;
+    font-weight: var(--font-light);
+  }
+  .benefit-card .btn {
+    display: flex;
+  }
+  .benefit-section-text {
+    font-size: 1rem;
+    font-weight: var(--font-regular);
+  }
 }
 
 /* MD (≥768px) */
@@ -2092,6 +2275,50 @@ footer .certification p {
   }
   .hero-section .features-box .feature:last-child {
     border: none;
+  }
+  .benefit-card img {
+    height: 300px;
+  }
+  .benefit-card .btn {
+    display: flex;
+  }
+  .form-container-row {
+    flex-direction: row;
+  }
+  .contact-us-section .left-col {
+    width: 100%;
+  }
+  .contact-us-section .right-col {
+    width: 100%;
+  }
+  .cta-section-container {
+    /* background: url("../images/cta-bg.png"),
+      linear-gradient(to bottom, #170f3d 30%); */
+    background: url("../images/cta.webp");
+    background-size: cover;
+    /* background-position: top center; */
+    background-repeat: no-repeat;
+    padding: 9rem 1.5rem 1.5rem 1.5rem !important;
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
+  }
+  .cta-section .cta-wrapper {
+    padding: 0.75rem;
+  }
+  .cta-section .inner-wrapper {
+    padding: 1.25rem;
+  }
+  .cta-section .cta-buttons {
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .cta-section .cta-buttons a {
+    width: 100%;
+  }
+  .stat-circle {
+    padding: 1.25rem;
   }
 }
 
@@ -2162,7 +2389,6 @@ footer .certification p {
     padding-left: 8.75rem;
     padding-right: 8.75rem;
   }
-  
 }
 
 /* Ultra-wide (≥1600px) */

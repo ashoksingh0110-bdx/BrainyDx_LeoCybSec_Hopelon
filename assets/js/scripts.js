@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// for work slider in services page
+// security-agent-slider
 $(document).ready(function () {
   $('.security-agent-slider').on('init reInit afterChange', function (event, slick, currentSlide) {
     $('.slick-dots li').removeClass('animating');
@@ -77,6 +77,7 @@ $(document).ready(function () {
   });
 });
 
+// testimonial-slider
 $(".testimonial-slider").slick({
   dots: false,
   arrows: false,
@@ -107,6 +108,82 @@ $(".testimonial-slider").slick({
     }
   ]
 });
+
+// benefit-cards-slider
+$(document).ready(function () {
+  $('.benefit-cards-slider').on('init reInit afterChange', function (event, slick, currentSlide) {
+    $('.slick-dots li').removeClass('animating');
+    $('.slick-dots li.slick-active').addClass('animating');
+  });
+
+  $(".benefit-cards-slider").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    cssEase: 'ease',
+    responsive: [
+      {
+        breakpoint: 992, // tablets
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 576, // mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  // When slider changes, update active tab
+$(".benefit-cards-slider").on("afterChange", function (event, slick, currentSlide) {
+  $(".tab-btn").removeClass("active");
+  let $activeTab = $('.tab-btn[data-slide="' + currentSlide + '"]').addClass("active");
+
+  // Scroll horizontally inside .left-tabs so active tab stays visible
+  let $tabsWrapper = $(".left-tabs");
+  let tab = $activeTab[0];
+  let wrapper = $tabsWrapper[0];
+
+  // Calculate how far to scroll
+  let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
+
+  $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400); // smooth scroll
+});
+
+// When tab is clicked, go to respective slide
+$(".tab-btn").on("click", function () {
+  var slideIndex = $(this).data("slide");
+  $(".benefit-cards-slider").slick("slickGoTo", slideIndex);
+
+  // Update active tab
+  $(".tab-btn").removeClass("active");
+  $(this).addClass("active");
+
+  // Scroll horizontally inside .left-tabs
+  let $tabsWrapper = $(".left-tabs");
+  let tab = this;
+  let wrapper = $tabsWrapper[0];
+  let offsetLeft = tab.offsetLeft - (wrapper.clientWidth / 2) + (tab.clientWidth / 2);
+
+  $tabsWrapper.animate({ scrollLeft: offsetLeft }, 400);
+});
+
+});
+
+
 
 
 // for changing the tab on scroll
@@ -159,7 +236,6 @@ $(document).ready(function () {
 
 
 // for arrow animation start only when in viewport
-
 document.addEventListener("DOMContentLoaded", () => {
   const svg = document.getElementById("arrowSvg");
   const stop1 = document.getElementById("stop1");
@@ -202,28 +278,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // to play the gif once(how hoplon works section)
 document.addEventListener("DOMContentLoaded", () => {
   const gif = document.getElementById("hoplonGif");
-  const img = document.getElementById("hoplonImage");
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Load GIF when visible
+        // Load & play GIF when visible
         gif.src = gif.dataset.src;
-        gif.classList.add("active");
-
-        // After 3 seconds, fade GIF → Image
-        setTimeout(() => {
-          gif.classList.remove("active");
-          img.classList.add("active");
-        }, 3000);
-
-        observer.unobserve(entry.target); // Run only once
+        observer.unobserve(entry.target); // Only run once
       }
     });
   }, { threshold: 0.5 });
 
   observer.observe(gif);
 });
-
 
 
