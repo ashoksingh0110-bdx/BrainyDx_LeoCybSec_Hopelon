@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const res = await fetch(file);
         const html = await res.text();
         target.innerHTML = html;
+
+        // to update the year for footer after injecting it to page
+        const years = document.querySelectorAll(".currentYear");
+        const thisYear = new Date().getFullYear();
+        years.forEach((el) => (el.textContent = thisYear));
       } catch (e) {
         console.error(`Could not load ${file}:`, e);
       }
@@ -45,7 +50,7 @@ $(document).ready(function () {
     arrows: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplay: true,
@@ -105,49 +110,120 @@ $(".testimonial-slider").slick({
 
 
 // for changing the tab on scroll
- $(document).ready(function () {
-    const contentSections = $('.content-section');
-    const navigation = $('#custom-scroll-tabs');
+$(document).ready(function () {
+  const contentSections = $('.content-section');
+  const navigation = $('#custom-scroll-tabs');
 
-    // Smooth scroll on click
-    navigation.on('click', 'a', function (e) {
-      e.preventDefault();
-      scrollToTarget($(this).attr('href'));
-    });
-
-    // Update nav highlight on scroll
-    $(window).on('scroll', function () {
-      updateActiveTab();
-    });
-
-    // Initial state
-    updateActiveTab();
-
-    function updateActiveTab() {
-      contentSections.each(function () {
-        const section = $(this);
-        const sectionId = section.attr('id');
-        const link = navigation.find(`a[href="#${sectionId}"]`);
-
-        if (
-          section.offset().top - $(window).height() / 2 < $(window).scrollTop() &&
-          section.offset().top + section.outerHeight() - $(window).height() / 2 > $(window).scrollTop()
-        ) {
-          navigation.find('a').removeClass('active');
-          link.addClass('active');
-        }
-      });
-    }
-
-    function scrollToTarget(selector) {
-      const target = $(selector);
-      if (target.length) {
-        $('html, body').animate(
-          {
-            scrollTop: target.offset().top - 100, // adjust offset if header overlaps
-          },
-          800
-        );
-      }
-    }
+  // Smooth scroll on click
+  navigation.on('click', 'a', function (e) {
+    e.preventDefault();
+    scrollToTarget($(this).attr('href'));
   });
+
+  // Update nav highlight on scroll
+  $(window).on('scroll', function () {
+    updateActiveTab();
+  });
+
+  // Initial state
+  updateActiveTab();
+
+  function updateActiveTab() {
+    contentSections.each(function () {
+      const section = $(this);
+      const sectionId = section.attr('id');
+      const link = navigation.find(`a[href="#${sectionId}"]`);
+
+      if (
+        section.offset().top - $(window).height() / 2 < $(window).scrollTop() &&
+        section.offset().top + section.outerHeight() - $(window).height() / 2 > $(window).scrollTop()
+      ) {
+        navigation.find('a').removeClass('active');
+        link.addClass('active');
+      }
+    });
+  }
+
+  function scrollToTarget(selector) {
+    const target = $(selector);
+    if (target.length) {
+      $('html, body').animate(
+        {
+          scrollTop: target.offset().top - 100, // adjust offset if header overlaps
+        },
+        800
+      );
+    }
+  }
+});
+
+
+// for arrow animation start only when in viewport
+
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.getElementById("arrowSvg");
+  const stop1 = document.getElementById("stop1");
+  const stop2 = document.getElementById("stop2");
+
+  // Reset initial state (no fill)
+  stop1.setAttribute("offset", "0%");
+  stop2.setAttribute("offset", "0%");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate gradient manually
+        let start = null;
+        const duration = 500; // 3s
+
+        function animateFill(timestamp) {
+          if (!start) start = timestamp;
+          let progress = (timestamp - start) / duration;
+          if (progress > 1) progress = 1;
+
+          stop1.setAttribute("offset", progress);
+          stop2.setAttribute("offset", progress);
+
+          if (progress < 1) {
+            requestAnimationFrame(animateFill);
+          }
+        }
+
+        requestAnimationFrame(animateFill);
+
+        observer.unobserve(svg); // Run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(svg);
+})
+
+// to play the gif once(how hoplon works section)
+document.addEventListener("DOMContentLoaded", () => {
+  const gif = document.getElementById("hoplonGif");
+  const img = document.getElementById("hoplonImage");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Load GIF when visible
+        gif.src = gif.dataset.src;
+        gif.classList.add("active");
+
+        // After 3 seconds, fade GIF → Image
+        setTimeout(() => {
+          gif.classList.remove("active");
+          img.classList.add("active");
+        }, 3000);
+
+        observer.unobserve(entry.target); // Run only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(gif);
+});
+
+
+

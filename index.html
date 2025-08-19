@@ -43,7 +43,7 @@
       >
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="hero-video">
-          <source src="./assets/images/banner.mp4" type="video/mp4" />
+          <source src="./assets/images/banner.webm" type="video/mp4" />
         </video>
 
         <!-- Overlay -->
@@ -105,26 +105,26 @@
 
             <!-- Features -->
             <div
-              class="features-box mt-5 d-flex justify-content-center flex-wrap gap-4 rounded-4 shadow"
+              class="row features-box mt-5 d-flex justify-content-center flex-wrap row-gap-20"
             >
-              <div class="feature text-center">
+              <div class="col-md-4 feature text-center">
                 <img src="./assets/icons/hex-icon.svg" alt="icon" />
                 <div class="f-content">
-                  <h5>8 Security Modules</h5>
+                  <h4>8 Security Modules</h4>
                   <p>Total tech protection, zero blind spots</p>
                 </div>
               </div>
-              <div class="feature text-center">
+              <div class="col-md-4 feature text-center">
                 <img src="./assets/icons/hex-icon.svg" alt="icon" />
                 <div class="f-content">
-                  <h5>50+ Vendors</h5>
+                  <h4>50+ Vendors</h4>
                   <p>Bring your security tools into one platform</p>
                 </div>
               </div>
-              <div class="feature text-center">
+              <div class="col-md-4 feature text-center">
                 <img src="./assets/icons/hex-icon.svg" alt="icon" />
                 <div class="f-content">
-                  <h5>24/7</h5>
+                  <h4>24/7</h4>
                   <p>Threat Monitoring Across All Systems</p>
                 </div>
               </div>
@@ -136,15 +136,46 @@
       <!-- Problem Section -->
       <section class="problem-section section-padding">
         <div class="container">
-          <span class="section-badge badge-primary">
-            <img src="./assets/icons/star.png" alt="start" />
-            Problem
-          </span>
+          <div class="badge-svg">
+            <span
+              class="section-badge badge-primary"
+              style="position: relative; z-index: 2; background-color: #2f1b92"
+            >
+              <img src="./assets/icons/star.png" alt="start" />
+              Problem
+            </span>
+            <div class="svg-arrow-box">
+              <svg
+                id="arrowSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="163"
+                viewBox="0 0 40 163"
+                fill="none"
+              >
+                <defs>
+                  <linearGradient id="fillGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop id="stop1" offset="0%" stop-color="#D4514B"></stop>
+                    <stop
+                      id="stop2"
+                      offset="0%"
+                      stop-color="transparent"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M0.998817 155H-0.00118256V156H0.998817V155ZM39.7071 155.707C40.0976 155.317 40.0976 154.683 39.7071 154.293L33.3431 147.929C32.9526 147.538 32.3195 147.538 31.9289 147.929C31.5384 148.319 31.5384 148.953 31.9289 149.343L37.5858 155L31.9289 160.657C31.5384 161.047 31.5384 161.681 31.9289 162.071C32.3195 162.462 32.9526 162.462 33.3431 162.071L39.7071 155.707ZM0.998817 1V0L-0.00118256 0V1L0.998817 1ZM0.998817 155V156L39 156V155V154L0.998817 154V155ZM36.4815 1V0L0.998817 0V1V2L36.4815 2V1ZM0.998817 1L-0.00118256 1V155H0.998817H1.99882V1L0.998817 1Z"
+                  fill="url(#fillGradient)"
+                />
+              </svg>
+            </div>
+          </div>
+
           <h2 class="section-heading mb-40">
-            THe Cybersecurity Threat is worse for <span>SMBs</span>
+            THE CYBERSECURITY THREAT IS WORSE <span>SMBs</span>
           </h2>
 
-          <div class="row gap-32">
+          <div class="row gap-32 px-4">
             <div class="col-md-4">
               <div class="card-style-1">
                 <img
@@ -161,7 +192,7 @@
             <div class="col-md-4">
               <div class="card-style-1">
                 <img
-                  src="./assets/icons/complexity.png"
+                  src="./assets/icons/threats.png"
                   alt="Rising Threats icon"
                   class="icon"
                 />
@@ -174,7 +205,7 @@
             <div class="col-md-4">
               <div class="card-style-1">
                 <img
-                  src="./assets/icons/complexity.png"
+                  src="./assets/icons/talent_gap.png"
                   alt="Talent Gap icon"
                   class="icon"
                 />
@@ -185,10 +216,10 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="card-style-1">
                 <img
-                  src="./assets/icons/complexity.png"
+                  src="./assets/icons/compliance.png"
                   alt="Compliance icon"
                   class="icon"
                 />
@@ -201,7 +232,7 @@
             <div class="col-md-6">
               <div class="card-style-1">
                 <img
-                  src="./assets/icons/complexity.png"
+                  src="./assets/icons/new_threats.png"
                   alt="New Threats icon"
                   class="icon"
                 />
@@ -218,28 +249,30 @@
         </div>
       </section>
 
-      <!-- AI Security Agent Section -->
-      <section class="features-section section-padding">
+      <!-- AI Security Agent Section(desktop view) -->
+      <section class="features-section section-padding d-none d-md-block">
         <div class="gradient-overlay"></div>
-        <div class="container content-container p-0" style="max-width: 100%;">
-          <div class="section-padding ps-0 py-0 d-flex flex-column align-items-center justify-content-center">
+        <div class="container content-container p-0" style="max-width: 100%">
+          <div
+            class="section-padding ps-0 py-0 d-flex flex-column align-items-center justify-content-center"
+          >
             <span class="section-badge badge-secondary">
-            <img src="./assets/icons/star.png" alt="start" />
-            AI Security Agent for SMBs
-          </span>
-          <h2 class="section-heading mb-20">
-            <span>Meet Hoplon:</span> your 24/7 AI Security Partner
-          </h2>
-          <div class="section-content text-center mb-40">
-            Hoplon is the first AI cybersecurity agent designed to deliver
-            enterprise-grade protection for SMBs without the need for an
-            in-house security team
-          </div>
+              <img src="./assets/icons/star.png" alt="start" />
+              AI Security Agent for SMBs
+            </span>
+            <h2 class="section-heading mb-20">
+              <span>MEET HOPELON:</span> YOUR 24/7 AI SECURITY PARTNER
+            </h2>
+            <div class="section-content text-center mb-40">
+              Hoplon is the first AI cybersecurity agent designed to deliver
+              enterprise-grade protection for SMBs without the need for an
+              in-house security team
+            </div>
           </div>
 
           <!-- for desktop view -->
-          <div class="tab-style-1 d-none d-md-block">
-            <div class="d-flex">
+          <div class="tab-style-1">
+            <div class="features-tab-container d-flex">
               <!-- Tabs Header (Left) -->
               <div class="mb-4 tab-header">
                 <div
@@ -329,17 +362,17 @@
               </div>
 
               <!-- Content Sections (Right) -->
-              <div class="">
+              <div class="w-100">
                 <div id="risk" class="content-section pb-3">
                   <img
-                    src="./assets/images/1.png"
+                    src="./assets/images/1.webp"
                     alt="Risk Insights Image"
                     class="img-fluid"
                   />
                 </div>
                 <div id="compliance" class="content-section pb-3">
                   <img
-                    src="./assets/images/2.png"
+                    src="./assets/images/2.webp"
                     alt="Compliance Readiness Image"
                     class="img-fluid"
                   />
@@ -353,14 +386,14 @@
                 </div>
                 <div id="platform" class="content-section pb-3">
                   <img
-                    src="./assets/images/4.png"
+                    src="./assets/images/3.webp"
                     alt="Platform Image"
                     class="img-fluid"
                   />
                 </div>
                 <div id="cloud" class="content-section pb-3">
                   <img
-                    src="./assets/images/5.png"
+                    src="./assets/images/4.webp"
                     alt="Cloud Image"
                     class="img-fluid"
                   />
@@ -368,9 +401,31 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
+      <!-- AI Security Agent Section (for mobile view) -->
+      <section class="m-features-section section-padding d-block d-md-none">
+        <div class="gradient-overlay"></div>
+        <div class="container content-container p-0" style="max-width: 100%">
+          <div
+            class="section-padding ps-0 py-0 d-flex flex-column align-items-center justify-content-center"
+          >
+            <span class="section-badge badge-secondary">
+              <img src="./assets/icons/star.png" alt="start" />
+              AI Security Agent for SMBs
+            </span>
+            <h2 class="section-heading mb-20 text-center">
+              <span>MEET HOPELON:</span> YOUR 24/7 AI SECURITY PARTNER
+            </h2>
+            <div class="section-content text-center mb-40">
+              Hoplon is the first AI cybersecurity agent designed to deliver
+              enterprise-grade protection for SMBs without the need for an
+              in-house security team
+            </div>
+          </div>
           <!-- Security Agent Slider -->
-          <!-- <div class="security-agent-slider-container" style="overflow: none;">
+          <div class="security-agent-slider-container">
             <div class="security-agent-slider">
               <div class="security-agent-slide">
                 <div class="agent-card">
@@ -401,15 +456,15 @@
                 <div class="agent-card">
                   <div class="image-box">
                     <img
-                      src="./assets/images/m-risk-insights.png"
+                      src="./assets/images/m-2.png"
                       alt="Risk Insights Image"
                       class="img-fluid"
                     />
                   </div>
                   <div class="nav-link tab-btn">
                     <img
-                      src="./assets/icons/risk-insights.png"
-                      alt="Risk Insights"
+                      src="./assets/icons/compliance-readiness.png"
+                      alt="Compliance Readiness"
                     />
                     <div class="content">
                       <h4>Comprehensive Cybersecurity Risk Insights</h4>
@@ -426,15 +481,15 @@
                 <div class="agent-card">
                   <div class="image-box">
                     <img
-                      src="./assets/images/m-risk-insights.png"
-                      alt="Risk Insights Image"
+                      src="./assets/images/m-3.png"
+                      alt="Compliance Readiness Image"
                       class="img-fluid"
                     />
                   </div>
                   <div class="nav-link tab-btn">
                     <img
-                      src="./assets/icons/risk-insights.png"
-                      alt="Risk Insights"
+                      src="./assets/icons/ai-assistant.png"
+                      alt="AI Assistant"
                     />
                     <div class="content">
                       <h4>Comprehensive Cybersecurity Risk Insights</h4>
@@ -451,15 +506,15 @@
                 <div class="agent-card">
                   <div class="image-box">
                     <img
-                      src="./assets/images/m-risk-insights.png"
+                      src="./assets/images/m-4.png"
                       alt="Risk Insights Image"
                       class="img-fluid"
                     />
                   </div>
                   <div class="nav-link tab-btn">
                     <img
-                      src="./assets/icons/risk-insights.png"
-                      alt="Risk Insights"
+                      src="./assets/icons/platform.png"
+                      alt="Platform Icon"
                     />
                     <div class="content">
                       <h4>Comprehensive Cybersecurity Risk Insights</h4>
@@ -476,15 +531,15 @@
                 <div class="agent-card">
                   <div class="image-box">
                     <img
-                      src="./assets/images/m-risk-insights.png"
+                      src="./assets/images/m-5.png"
                       alt="Risk Insights Image"
                       class="img-fluid"
                     />
                   </div>
                   <div class="nav-link tab-btn">
                     <img
-                      src="./assets/icons/risk-insights.png"
-                      alt="Risk Insights"
+                      src="./assets/icons/email-cloud.png"
+                      alt="Email and Cloud Icon"
                     />
                     <div class="content">
                       <h4>Comprehensive Cybersecurity Risk Insights</h4>
@@ -497,7 +552,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
 
@@ -538,7 +593,7 @@
               <div class="card-content">
                 <div class="card-image">
                   <img
-                    src="./assets/images/benefit-cost.png"
+                    src="./assets/images/benefit-cost.webp"
                     alt="Cost Efficiency"
                   />
                 </div>
@@ -574,7 +629,7 @@
               <div class="card-content">
                 <div class="card-image">
                   <img
-                    src="./assets/images/benefit-setup.png"
+                    src="./assets/images/benefit-setup.webp"
                     alt="10 Minutes Setup"
                   />
                 </div>
@@ -609,7 +664,7 @@
               <div class="card-content">
                 <div class="card-image">
                   <img
-                    src="./assets/images/benefit-compliance.png"
+                    src="./assets/images/benefit-compliance.webp"
                     alt="Compliance"
                   />
                 </div>
@@ -646,7 +701,7 @@
               <div class="card-content">
                 <div class="card-image">
                   <img
-                    src="./assets/images/benefit-incidents.png"
+                    src="./assets/images/benefit-incidents.webp"
                     alt="Incident Status"
                   />
                 </div>
@@ -676,8 +731,8 @@
         </div>
       </section>
 
-      <!-- How Hopelon Works Section -->
-      <section class="how-hoplon-works section-padding">
+      <!-- How Hopelon Works Section (for desktop view) -->
+      <section class="how-hoplon-works section-padding d-none d-md-block">
         <div class="d-flex justify-content-center">
           <div class="title-box">
             <span class="section-badge badge-secondary">
@@ -685,25 +740,127 @@
               Simplified Process
             </span>
             <h2 class="section-heading">HOW HOPLON WORKS</h2>
-        </div>
+          </div>
         </div>
 
         <!-- Replace this div with your GIF -->
-        <div class="howhoplon-gif">
+        <!-- <div class="howhoplon-gif">
           <img
             src="./assets/images/how-hopelon-works.gif"
             alt="Hoplon Process Animation"
+             class="gif-once"
+          />
+        </div> -->
+        <div class="howhoplon-gif">
+          <!-- GIF -->
+          <img
+            id="hoplonGif"
+            class="gif active"
+            src=""
+            data-src="./assets/images/how-hopelon-works.gif"
+            alt="Hoplon Process Animation"
+          />
+
+          <!-- Static image -->
+          <img
+            id="hoplonImage"
+            class="static"
+            src="./assets/images/how-hopelon-works.png"
+            alt="Hoplon Process"
           />
         </div>
+      </section>
+      <!-- How Hopelon Works Section (for mobile view)-->
+      <section class="how-hoplon-works-m section-padding d-block d-md-none">
+        <div class="d-flex justify-content-center">
+          <div class="title-box">
+            <span class="section-badge badge-secondary">
+              <img src="./assets/icons/star.png" alt="process icon" />
+              Simplified Process
+            </span>
+            <h2 class="section-heading">HOW HOPLON WORKS</h2>
+          </div>
+        </div>
+        <!-- <img
+          class="d-block d-md-none img-fluid"
+          src="./assets/images/how-hopelon-works-m.png"
+          alt="how-hopelon-works"
+        /> -->
+        <section class="process-flow">
+          <!-- Step 1 -->
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="hexagon-wrapper">
+              <div class="hexagon">
+                <img src="./assets/icons/onboarding.png" alt="Onboarding" />
+              </div>
+            </div>
+            <div class="step-content">
+              <h4>Instant Secure Onboarding</h4>
+              <p>Just signup and connect—protected in 10 minutes</p>
+            </div>
+            <div class="arrow">
+              <img src="./assets/icons/arrow_down.png" alt="arrow">
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step">
+            <div class="step-number">02</div>
+           <div class="hexagon-wrapper">
+              <div class="hexagon">
+                <img src="./assets/icons/onboarding.png" alt="Onboarding" />
+              </div>
+            </div>
+            <div class="step-content">
+              <h4>Live Monitoring</h4>
+              <p>Your AI-powered security team is now live and on alert</p>
+            </div>
+            <div class="arrow">
+              <img src="./assets/icons/arrow_down.png" alt="arrow">
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="hexagon-wrapper">
+              <div class="hexagon">
+                <img src="./assets/icons/onboarding.png" alt="Onboarding" />
+              </div>
+            </div>
+            <div class="step-content">
+              <h4>Alerts & Reports</h4>
+              <p>Customer alerts and detailed incident reports</p>
+            </div>
+            <div class="arrow">
+              <img src="./assets/icons/arrow_down.png" alt="arrow">
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step">
+            <div class="step-number">04</div>
+            <div class="hexagon-wrapper">
+              <div class="hexagon">
+                <img src="./assets/icons/onboarding.png" alt="Onboarding" />
+              </div>
+            </div>
+            <div class="step-content">
+              <h4>Rapid Response</h4>
+              <p>Actionable steps taken instantly</p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Contact us Section -->
       <section class="contact-us-section section-padding">
         <div class="overlay contact-overlay"></div>
         <div class="container">
-          <div class="row g-4">
+          <div class="row form-container-row gap-40">
             <!-- Left Column -->
-            <div class="col-lg-5">
+            <div class="left-col">
               <div class="contact-card mb-40">
                 <div class="section-icon mb-3">
                   <img src="./assets/icons/info.png" alt="info icon" />
@@ -759,7 +916,7 @@
             </div>
 
             <!-- Right Column -->
-            <div class="col-lg-7">
+            <div class="right-col">
               <div class="contact-card form-container">
                 <span class="section-badge badge-secondary">
                   <img src="./assets/icons/contact-tag.png" alt="contact" />
@@ -772,7 +929,7 @@
                 </p>
 
                 <form>
-                  <div class="row gap-32">
+                  <div class="row gap-24">
                     <div class="col-md-6">
                       <div class="form-grp">
                         <label for="fname">First Name</label>
@@ -957,7 +1114,7 @@
                     interconnected world, unity is strength, & together, we’re
                     on a mission to safeguard digital landscapes.
                   </p>
-                  <div class="cta-buttons mt-4">
+                  <div class="cta-buttons mt-4 gap-3">
                     <a href="#" class="btn btn-secondary me-3">START TODAY</a>
                     <a href="#" class="btn btn-primary">TALK TO SALES</a>
                   </div>
