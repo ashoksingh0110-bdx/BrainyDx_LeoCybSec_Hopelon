@@ -1007,6 +1007,7 @@ footer .certification p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   z-index: 0;
   /* overflow: hidden; */
 }
@@ -1015,6 +1016,7 @@ footer .certification p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
 }
 .home-page .features-section.section-padding {
   padding-right: 0px !important;
@@ -1170,6 +1172,7 @@ footer .certification p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-attachment: scroll;
 }
 .overlay.benefits-overlay {
   background: linear-gradient(180deg, #2e1f7a 0%, #0b0622 100%);
