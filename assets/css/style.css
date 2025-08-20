@@ -584,6 +584,9 @@ input[type="checkbox"]:checked {
   height: 2.25rem;
   margin-right: 1rem;
 }
+.offcanvas-header .logo {
+  height: 2.25rem;
+}
 .header .nav-item .nav-link {
   color: var(--white);
 }
@@ -1007,6 +1010,7 @@ footer .certification p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
   z-index: 0;
   /* overflow: hidden; */
 }
@@ -1015,6 +1019,7 @@ footer .certification p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
 }
 .home-page .features-section.section-padding {
   padding-right: 0px !important;
@@ -1170,6 +1175,7 @@ footer .certification p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-attachment: scroll;
 }
 .overlay.benefits-overlay {
   background: linear-gradient(180deg, #2e1f7a 0%, #0b0622 100%);
@@ -1458,7 +1464,7 @@ footer .certification p {
   border-radius: 2.5rem 2.5rem 0 0;
   background: linear-gradient(to right, #130d31 30%, transparent 30%),
     url("../images/cta-bg.webp");
-  background-size: contain;
+  background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
 }
@@ -1963,8 +1969,6 @@ footer .certification p {
     right: -1rem;
   }
   .cta-section-container {
-    /* background: url("../images/cta-bg.png"),
-      linear-gradient(to bottom, #170f3d 30%); */
     background: url("../images/cta.webp");
     background-size: cover;
     /* background-position: top center; */
@@ -2193,8 +2197,6 @@ footer .certification p {
     right: -1rem;
   }
   .cta-section-container {
-    /* background: url("../images/cta-bg.png"),
-      linear-gradient(to bottom, #170f3d 30%); */
     background: url("../images/cta.webp");
     background-size: cover;
     /* background-position: top center; */
@@ -2341,8 +2343,6 @@ footer .certification p {
     width: 100%;
   }
   .cta-section-container {
-    /* background: url("../images/cta-bg.png"),
-      linear-gradient(to bottom, #170f3d 30%); */
     background: url("../images/cta.webp");
     background-size: cover;
     /* background-position: top center; */
@@ -2443,7 +2443,7 @@ footer .certification p {
     padding-left: 8.75rem;
     padding-right: 8.75rem;
   }
-   .benefit-card img {
+  .benefit-card img {
     height: 459px;
   }
 }
