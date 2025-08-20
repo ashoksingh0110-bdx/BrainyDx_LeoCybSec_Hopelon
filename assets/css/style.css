@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: #170f3d;
@@ -501,6 +505,7 @@ input:focus,
 textarea:focus {
   border-color: var(--border-primary);
   box-shadow: none !important;
+  outline: none;
 }
 input::placeholder,
 textarea::placeholder {
@@ -711,7 +716,7 @@ footer .certification p {
 .hero-section {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .hero-video {
@@ -776,6 +781,11 @@ footer .certification p {
   font-size: 1.25rem;
   max-width: 498px;
   text-align: center;
+  font-weight: var(--font-regular);
+  line-height: 2rem;
+  color: var(--text-gray-200);
+  font-family: var(--primary-font);
+  letter-spacing: 1%;
 }
 .client-badge .content .star {
   font-size: 1rem;
@@ -804,7 +814,7 @@ footer .certification p {
   flex-direction: row;
   align-items: center;
   padding: 0 1.25rem;
-  border-right: 2px solid var(--primary-300);
+  border-right: 2.5px solid var(--primary-300);
   position: relative;
   margin-top: 0;
 }
@@ -1180,13 +1190,16 @@ footer .certification p {
   position: sticky;
   top: 6rem;
 }
+.benefit-card:last-child {
+  margin-bottom: 0;
+}
 .benefit-card .card-image {
   border-radius: 0.75rem;
   border: 1px solid var(--gray-600);
 }
 .benefit-card img {
   border-radius: 0.75rem;
-  height: 459px;
+  height: 280px;
 }
 
 .benefit-card .left-tabs {
@@ -1217,11 +1230,13 @@ footer .certification p {
 }
 
 .benefit-card .card-content {
+  /* padding-left: 2rem; */
   display: flex;
   gap: 2rem;
   justify-content: space-between;
 }
 .benefit-card .card-content .card-text {
+  padding: 0 1rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1260,8 +1275,8 @@ footer .certification p {
   padding: 0 0.625rem 0 0;
 }
 
-.card-image img {
-  height: 408px;
+.benefit-card img {
+  /* height: 408px; */
   /* border-radius: 1rem; */
 }
 
@@ -1609,13 +1624,12 @@ footer .certification p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 96px; /* slightly larger than circle */
+  width: 96px;
   height: 96px;
-  border-style: solid;
-  border-color: var(--primary-300);
-  border-width: 1px;
   border-radius: 50%;
+  border: 0.36px solid var(--primary-300);
 }
+
 .stat-card h4 {
   color: var(--text-primary-50);
   font-weight: var(--font-semibold);
@@ -1626,6 +1640,35 @@ footer .certification p {
 }
 
 /* How hopelon works */
+.how-hoplon-works-video-section {
+  position: relative;
+}
+
+.how-hoplon-works-video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how-hoplon-works-video-section .title-box {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.how-hoplon-works-video-section .title-box {
+  width: fit-content;
+  background: #2e1f7a66;
+  z-index: 2;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7.5rem;
+}
 /* Root container */
 .how-hoplon-works {
   background: url("../images/how-hopelon-works-bg.webp") no-repeat;
@@ -1645,7 +1688,8 @@ footer .certification p {
 }
 
 /* Title box */
-.how-hoplon-works .title-box {
+.how-hoplon-works .title-box,
+.how-hoplon-works-m .title-box {
   width: fit-content;
   background: #2e1f7a66;
   position: relative;
@@ -1664,9 +1708,12 @@ footer .certification p {
   justify-content: center;
   align-items: center;
   margin-bottom: 2.5rem;
+  width: 100%;
+  padding: 1rem;
 }
 
-.how-hoplon-works .title-box h2 {
+.how-hoplon-works .title-box h2,
+.how-hoplon-works-video-section .title-box h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 10px;
@@ -1977,10 +2024,10 @@ footer .certification p {
     overflow: hidden;
   }
   .benefit-cards-slider {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .benefit-cards-slider .slick-dots {
-    bottom: 0rem;
+    bottom: -1.5rem;
   }
   .benefit-card {
     padding: 1.25rem;
@@ -2210,7 +2257,7 @@ footer .certification p {
     overflow: hidden;
   }
   .benefit-cards-slider .slick-dots {
-    bottom: 0rem;
+    bottom: -1.5rem;
   }
   .benefit-card {
     padding: 1.25rem;
@@ -2278,7 +2325,7 @@ footer .certification p {
     border: none;
   }
   .benefit-card img {
-    height: 300px;
+    /* height: 300px; */
   }
   .benefit-card .btn {
     display: flex;
@@ -2346,9 +2393,11 @@ footer .certification p {
     display: block;
   }
 
-  /* Optional: add slight spacing for appearance */
   .navbar .dropdown-menu {
     margin-top: 0.5rem;
+  }
+  .benefit-card img {
+    height: 320px;
   }
 }
 
@@ -2372,6 +2421,9 @@ footer .certification p {
   .problem-section .card-style-1 {
     min-height: 160px;
   }
+  .benefit-card img {
+    height: 350px;
+  }
 }
 /* XXL (≥1400px) */
 @media (min-width: 1400px) {
@@ -2389,6 +2441,9 @@ footer .certification p {
     padding-bottom: 1rem;
     padding-left: 8.75rem;
     padding-right: 8.75rem;
+  }
+   .benefit-card img {
+    height: 459px;
   }
 }
 

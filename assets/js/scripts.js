@@ -295,10 +295,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// to scroll to section on nav button click
+// to scroll to section on nav button click for benefits section in desktop view
 // function scrollToSection(sectionid) {
 //   const section = document.getElementById(sectionid);
 //   if (section) {
 //     section.scrollIntoView({ behavior: "smooth", block: "start" });
 //   }
 // }
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const topOffset = 80; // adjust for your sticky header height if any
+    const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+}
+
+
+// how it works video play only when in viewport and pause on last frame
+const video = document.getElementById("promoVideo");
+let hasPlayed = false; // track if already played once
+
+// Observer to detect when video enters viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !hasPlayed) {
+      video.play(); // play only once
+      hasPlayed = true;
+    }
+  });
+}, { threshold: 0.5 }); // play when at least 50% visible
+
+observer.observe(video);
+
+// Pause at last frame
+video.addEventListener("ended", () => {
+  video.currentTime = video.duration; // jump to last frame
+  video.pause(); // stop
+});
