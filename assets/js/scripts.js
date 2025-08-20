@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  inject("header", "components/header.html");
-  inject("footer", "components/footer.html");
+  // inject("header", "components/header.html");
+  // inject("footer", "components/footer.html");
 
 
   // for scrolling to top of the content on nav button click

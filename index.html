@@ -34,7 +34,37 @@
   </head>
   <body>
     <!-- Header inside Hero -->
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
+     <nav class="navbar navbar-expand-lg header">
+  <div
+    class="container-fluid d-flex justify-content-between align-items-center"
+  >
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="./assets/images/logo.png" alt="Tech Prodigy Logo" class="logo" />
+    </a>
+
+    <!-- Navbar Toggle (small screens only) -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#demoOffcanvas"
+      aria-controls="demoOffcanvas"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Buttons -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="d-flex gap-2 mt-3 mt-lg-0">
+        <a href="#" class="btn btn-secondary">Start Free Trial</a>
+        <a href="#" class="btn btn-primary">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Main Content -->
     <main class="home-page">
@@ -1539,7 +1569,76 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
+     <!-- footer.html -->
+<footer class="footer-section section-padding">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-center">
+      <!-- Logo and Copyright -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <img
+          src="./assets/images/footer-logo.png"
+          alt="Hoplon Logo"
+          class="footer-logo mb-2"
+        />
+        <p class="mb-0 copyright-text d-none d-md-block">
+          © <span class="currentYear"></span> All Rights Reserved
+        </p>
+      </div>
+
+      <!-- Certifications -->
+      <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+        <div
+          class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start"
+        >
+          <img
+            src="./assets/images/iso.png"
+            alt="ISO27001"
+            class="cert-icon me-2"
+          />
+          <p class="mb-0"><em>ISO27001 Certified</em></p>
+        </div>
+        <div
+          class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start"
+        >
+          <img
+            src="./assets/images/crest.png"
+            alt="CREST"
+            class="cert-icon me-2"
+          />
+          <p class="mb-0"><em>CREST Certified</em></p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-between">
+        <!-- Email -->
+        <div>
+          <p class="email-label">
+            <img src="./assets/icons/mail.png" alt="mail" /> EMAIL
+          </p>
+          <a href="mailto:info@leocybsec.com" class="email-link"
+            >info@leocybsec.com</a
+          >
+        </div>
+
+        <!-- Socials -->
+        <div class="social-list">
+          <p class="socials-label">SOCIALS</p>
+          <a href="#" class="social-icon me-2">
+            <img src="./assets/icons/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="./assets/icons/x.png" alt="X" />
+          </a>
+        </div>
+      </div>
+      <p class="mb-0 copyright-text d-block d-md-none text-start">
+        © <span class="currentYear"></span> All Rights Reserved
+      </p>
+    </div>
+  </div>
+</footer>
+
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
