@@ -295,10 +295,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// to scroll to section on nav button click
+// to scroll to section on nav button click for benefits section in desktop view
 // function scrollToSection(sectionid) {
 //   const section = document.getElementById(sectionid);
 //   if (section) {
 //     section.scrollIntoView({ behavior: "smooth", block: "start" });
 //   }
 // }
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const topOffset = 80; // adjust for your sticky header height if any
+    const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+}
