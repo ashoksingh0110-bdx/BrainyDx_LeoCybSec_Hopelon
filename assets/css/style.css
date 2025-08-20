@@ -505,6 +505,7 @@ input:focus,
 textarea:focus {
   border-color: var(--border-primary);
   box-shadow: none !important;
+  outline: none;
 }
 input::placeholder,
 textarea::placeholder {
@@ -1623,13 +1624,12 @@ footer .certification p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 96px; /* slightly larger than circle */
+  width: 96px;
   height: 96px;
-  border-style: solid;
-  border-color: var(--primary-300);
-  border-width: 1px;
   border-radius: 50%;
+  border: 0.36px solid var(--primary-300);
 }
+
 .stat-card h4 {
   color: var(--text-primary-50);
   font-weight: var(--font-semibold);
