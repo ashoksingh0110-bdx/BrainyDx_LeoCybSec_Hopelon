@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // inject("header", "components/header.html");
   // inject("footer", "components/footer.html");
-
+ const years = document.querySelectorAll(".currentYear");
+  const thisYear = new Date().getFullYear();
+  years.forEach((el) => (el.textContent = thisYear));
 
   // for scrolling to top of the content on nav button click
   document.querySelectorAll('.tab-btn').forEach(button => {
@@ -56,7 +58,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     pauseOnFocus: false,
     cssEase: 'ease',
@@ -89,7 +91,7 @@ $(".testimonial-slider").slick({
   slidesToScroll: 1,
   adaptiveHeight: true,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3000,
   pauseOnHover: true,
   pauseOnFocus: false,
   cssEase: 'ease',
@@ -127,7 +129,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
     pauseOnFocus: false,
     cssEase: 'ease',

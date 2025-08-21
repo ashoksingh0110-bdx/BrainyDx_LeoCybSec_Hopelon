@@ -219,6 +219,7 @@ p {
   position: relative;
   overflow: hidden;
   --btn-move: calc(100% + 0.5rem);
+  letter-spacing: 1px;
 }
 .btn .icon {
   height: 1rem;
@@ -925,17 +926,24 @@ footer .certification p {
   border-radius: 2rem;
   width: fit-content;
   margin-bottom: 0.75rem;
+  font-size: 14px;
+  font-weight: 500;
 }
 .section-badge img {
   height: 1rem;
   margin-right: 0.5rem;
 }
 .badge-primary {
-  background: #2f1b9280;
+  background: #b8aaff33;
 }
+
 .badge-secondary {
+  background: #7b68d9;
+}
+.badge-secondary-40 {
   background: #7b68d966;
 }
+
 .badge-secondary {
   background: var(--primary-300);
 }
@@ -967,8 +975,11 @@ footer .certification p {
 }
 
 .tab-style-1 .nav-link.active {
-  background: #7b68d933;
-  border: 1px solid var(--white);
+  /* background: #7b68d933; */
+  background: #2e1f7a;
+  border: 1px solid var(--primary-300);
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 2px 16px 0px #5f4dba1a;
 }
 
 .tab-style-1 .nav-link .content {
@@ -1031,6 +1042,10 @@ footer .certification p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.features-section .section-content {
+  max-width: 802px;
 }
 
 .features-section .tab-header {
@@ -1196,6 +1211,7 @@ footer .certification p {
   align-items: start;
   position: sticky;
   top: 6rem;
+  box-shadow: 0px 2px 110px 0px #7b68d91a;
 }
 .benefit-card:last-child {
   margin-bottom: 0;
@@ -1224,7 +1240,7 @@ footer .certification p {
   color: #ccc;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   text-align: left;
   transition: all 0.3s ease;
   cursor: auto;
@@ -1297,6 +1313,7 @@ footer .certification p {
   font-size: 1rem;
   color: var(--text-white);
   margin-bottom: 1.25rem;
+  font-weight: 300;
 }
 
 .contact-us-section {
@@ -1394,6 +1411,10 @@ footer .certification p {
   border-radius: 1rem;
 }
 
+.contact-us-section .right-col h2 {
+  font-weight: 600;
+}
+
 .industries-section {
   background-color: #2e1f7a;
   color: #fff;
@@ -1449,10 +1470,11 @@ footer .certification p {
 }
 
 .industries-section .industry-card p {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-gray-200);
   margin: 0;
   text-align: left;
+  font-weight: 400;
 }
 
 .cta-section {
@@ -1497,7 +1519,7 @@ footer .certification p {
 
 .cta-wrapper p {
   color: var(--text-gray-200);
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .badge-label {
@@ -1597,6 +1619,7 @@ footer .certification p {
 .testimonial-card .role {
   display: block;
   color: var(--text-secondary-600);
+  font-size: 1rem !important;
 }
 
 .testimonial-card .logo img {
@@ -1838,6 +1861,12 @@ footer .certification p {
   height: 2.5rem;
 }
 
+.benefit-card .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  width: fit-content;
+}
+
 @media (max-width: 575px) {
   h1 {
     font-size: 2.5rem;
@@ -1993,15 +2022,19 @@ footer .certification p {
     width: 100%;
   }
   .contact-us-section .info-box:first-child {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  .contact-us-section .info-box.first {
+    display: flex !important;
   }
 
   .contact-us-section .info-box:not(:first-child) {
     display: block;
   }
+
   .contact-us-section .info-box p {
     text-align: start;
   }
@@ -2065,6 +2098,9 @@ footer .certification p {
   .benefit-section-text {
     font-size: 1rem;
     font-weight: var(--font-regular);
+  }
+  .benefit-card .card-content .card-text {
+    padding: 0px;
   }
 }
 
@@ -2294,6 +2330,9 @@ footer .certification p {
     font-size: 1rem;
     font-weight: var(--font-regular);
   }
+  .benefit-card .card-content .card-text {
+    padding: 0px;
+  }
 }
 
 /* MD (≥768px) */
@@ -2368,6 +2407,9 @@ footer .certification p {
   }
   .stat-circle {
     padding: 1.25rem;
+  }
+  .benefit-card .card-content .card-text {
+    padding: 0px;
   }
 }
 
