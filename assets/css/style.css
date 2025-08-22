@@ -1934,6 +1934,7 @@ footer .certification p {
     width: 66px;
     height: 66px;
     margin-bottom: 0;
+    padding: 6px;
   }
   .stat-circle {
     /* width: 58px;
@@ -2177,6 +2178,7 @@ footer .certification p {
     width: 66px;
     height: 66px;
     margin-bottom: 0;
+    padding: 6px;
   }
   .stat-circle {
     /* width: 58px;
@@ -2374,7 +2376,7 @@ footer .certification p {
     margin: 0 2rem 0 1rem;
   } */
    .stat-card .outer-circle{
-    padding: 0.5rem;
+    padding: 6px;
     margin-bottom: 0;
    }
   .stat-circle {
