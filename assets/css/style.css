@@ -244,16 +244,17 @@ p {
 }
 .btn::after {
   content: "";
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background-color: var(--secondary-500);
   position: absolute;
   top: -10px;
-  left: -3.5rem;
+  /* left: -3.5rem; */
+  left: -5rem;
   transform: translateX(0rem);
   z-index: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .btn:hover::after {
   left: var(--btn-move);
@@ -292,16 +293,16 @@ p {
 }
 .btn-outlined::after {
   content: "";
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background-color: var(--white);
   position: absolute;
   top: -10px;
-  left: -3.5rem;
+  left: -5rem;
   transform: translateX(0rem);
   z-index: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .btn-outlined:hover::after {
   left: var(--btn-move);
@@ -551,6 +552,16 @@ input[type="checkbox"]:checked {
   transform: rotate(45deg);
 } */
 
+.stars {
+  width: 76px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;   
+  z-index: 1000;
+}
+
 /* header css starts */
 .nav-item .nav-link {
   padding: 12px 24px !important;
@@ -780,7 +791,7 @@ footer .certification p {
   text-align: left;
   color: var(--text-gray-100);
   margin-bottom: 0;
-  font-size: 0.825rem;
+  font-size: 14px;
 }
 .hero-section .para-content {
   font-size: 1.25rem;
@@ -803,7 +814,7 @@ footer .certification p {
   height: 32px;
   border-radius: 50%;
   margin-right: -8px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
 }
 
 .hero-section .features-box {
@@ -1021,7 +1032,8 @@ footer .certification p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
+  /* background-attachment: scroll; */
+  background-attachment: fixed;
   z-index: 0;
   /* overflow: hidden; */
 }
@@ -1063,9 +1075,12 @@ footer .certification p {
 }
 .features-section .tab-style-1 .content-section img {
   height: 546px;
-  max-width: 100%; /* fits inside the container */
+  max-width: 90%; /* fits inside the container */
   height: auto;
   width: 100%;
+}
+.meetHoplon {
+  text-align: right !important;
 }
 .features-section .features-tab-container {
   width: 100%;
@@ -1217,8 +1232,8 @@ footer .certification p {
   margin-bottom: 0;
 }
 .benefit-card .card-image {
-  border-radius: 0.75rem;
-  border: 1px solid var(--gray-600);
+  /* border-radius: 0.75rem;
+  border: 1px solid var(--gray-600); */
 }
 .benefit-card img {
   border-radius: 0.75rem;
@@ -1236,7 +1251,7 @@ footer .certification p {
 
 .benefit-card .left-tabs .tab {
   background: transparent;
-  border: 1px solid #444;
+  border: 1px solid #5e54df;
   color: #ccc;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -1304,7 +1319,7 @@ footer .certification p {
 }
 
 .benefit-card .card-text h3 {
-  font-size: 1.825rem;
+  font-size: 30px;
   font-weight: 400;
   color: var(--text-white);
 }
@@ -2103,6 +2118,7 @@ footer .certification p {
   .card-image img {
     height: 100%;
     width: 100%;
+    border: solid 1px #5F5F60 !important;
   }
   .benefit-card .card-text h3 {
     font-size: 1.25rem;
@@ -2342,6 +2358,8 @@ footer .certification p {
   .card-image img {
     height: 100%;
     width: 100%;
+    border: solid 1px #5F5F60 !important;
+
   }
   .benefit-card .card-text h3 {
     font-size: 1.25rem;
