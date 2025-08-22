@@ -1562,6 +1562,9 @@ footer .certification p {
   color: #fff;
   text-align: left;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quote-mark {
@@ -2064,9 +2067,11 @@ footer .certification p {
   }
   .contact-us-section .left-col {
     width: 100%;
+    order: 2;
   }
   .contact-us-section .right-col {
     width: 100%;
+    order: 1;
   }
   .testimonial-slider-container .icon-animation {
     height: 5rem;
@@ -2301,9 +2306,11 @@ footer .certification p {
   }
   .contact-us-section .left-col {
     width: 100%;
+    order: 2;
   }
   .contact-us-section .right-col {
     width: 100%;
+    order: 1;
   }
   .testimonial-slider-container .icon-animation {
     height: 5rem;
@@ -2405,9 +2412,11 @@ footer .certification p {
   }
   .contact-us-section .left-col {
     width: 100%;
+    order: 2;
   }
   .contact-us-section .right-col {
     width: 100%;
+    order: 1;
   }
   .cta-section-container {
     background: url("../images/cta.webp");
@@ -2516,6 +2525,9 @@ footer .certification p {
   .benefit-card img {
     height: 459px;
   }
+  .testimonial-card{
+    min-height: 302px;
+  }
 }
 
 /* Ultra-wide (≥1600px) */
@@ -2537,5 +2549,8 @@ footer .certification p {
   }
   .problem-section .card-style-1 {
     min-height: 140px;
+  }
+  .testimonial-card{
+    min-height: 302px;
   }
 }

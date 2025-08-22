@@ -88,7 +88,7 @@ $(".testimonial-slider").slick({
   infinite: true,
   speed: 600,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   adaptiveHeight: true,
   autoplay: true,
   autoplaySpeed: 3000,
