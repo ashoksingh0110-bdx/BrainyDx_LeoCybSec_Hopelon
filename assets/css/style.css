@@ -1633,8 +1633,8 @@ footer .certification p {
   justify-content: center;
 }
 .stat-circle {
-  width: 78px;
-  height: 78px;
+  width:100%;
+  height:100%;
   border-radius: 50%;
   padding: 20px 6px;
   background: #ff5e48;
@@ -1645,19 +1645,28 @@ footer .certification p {
   font-size: 1.5rem;
   color: #fff;
   position: relative; /* Needed for ::after positioning */
-  margin-bottom: 1.125rem;
+  transform: rotate(-45deg);
 }
 
-.stat-circle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.stat-card .outer-circle {
+  /* content: ""; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 96px;
   height: 96px;
+  padding: 0.5rem;
   border-radius: 50%;
-  border: 0.36px solid var(--primary-300);
+  /* border: 0.36px solid var(--primary-300); */
+  border-top: 0.356px solid var(--primary-300);
+  border-right: 0.356px solid var(--primary-300);
+  /* border-bottom: 0.356px solid var(--primary-300); */
+  transform: rotate(45deg);
+  margin-bottom: 1.125rem;
 }
 
 .stat-card h4 {
@@ -1921,10 +1930,14 @@ footer .certification p {
   .stat-card h4 {
     font-size: 1rem;
   }
+  .stat-card .outer-circle {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 0;
+  }
   .stat-circle {
-    width: 58px;
-    height: 58px;
-    margin: 0 1rem 0 0;
+    /* width: 58px;
+    height: 58px; */
     padding: 1.25rem;
     font-size: 1rem;
   }
@@ -1933,6 +1946,7 @@ footer .certification p {
     height: 65px;
   }
   .stat-card .content {
+    margin-left: 1rem;
     text-align: left;
   }
   .hero-section {
@@ -2159,10 +2173,14 @@ footer .certification p {
   .stat-card h4 {
     font-size: 1rem;
   }
+  .stat-card .outer-circle {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 0;
+  }
   .stat-circle {
-    width: 58px;
-    height: 58px;
-    margin: 0 1rem 0 0;
+    /* width: 58px;
+    height: 58px; */
     padding: 1.25rem;
     font-size: 1rem;
   }
@@ -2171,6 +2189,7 @@ footer .certification p {
     height: 65px;
   }
   .stat-card .content {
+    margin-left: 1rem;
     text-align: left;
   }
   .hero-section {
@@ -2351,10 +2370,17 @@ footer .certification p {
     flex-direction: row;
     justify-content: start;
   }
-  .stat-circle {
+  /* .stat-card .outer-circle{
     margin: 0 2rem 0 1rem;
+  } */
+   .stat-card .outer-circle{
+    padding: 0.5rem;
+    margin-bottom: 0;
+   }
+  .stat-circle {
   }
   .stat-card .content {
+    margin-left: 1rem;
     text-align: left;
   }
   .hero-section .features-box .feature {
