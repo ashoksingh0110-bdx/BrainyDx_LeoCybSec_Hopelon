@@ -1024,6 +1024,7 @@ footer .certification p {
 
 .tab-style-1 .content-section {
   padding-left: 2rem;
+  min-height: 100vh;
 }
 
 .home-page .features-section {
