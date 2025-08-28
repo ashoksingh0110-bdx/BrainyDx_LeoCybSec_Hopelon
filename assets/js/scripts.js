@@ -57,7 +57,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     pauseOnFocus: false,
@@ -128,7 +128,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     pauseOnFocus: false,
@@ -240,44 +240,91 @@ $(document).ready(function () {
 
 
 // for arrow animation start only when in viewport
+// document.addEventListener("DOMContentLoaded", () => {
+//   const svg = document.getElementById("arrowSvg");
+//   const stop1 = document.getElementById("stop1");
+//   const stop2 = document.getElementById("stop2");
+
+//   // Reset initial state (no fill)
+//   stop1.setAttribute("offset", "0%");
+//   stop2.setAttribute("offset", "0%");
+
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         // Animate gradient manually
+//         let start = null;
+//         const duration = 500; // 3s
+
+//         function animateFill(timestamp) {
+//           if (!start) start = timestamp;
+//           let progress = (timestamp - start) / duration;
+//           if (progress > 1) progress = 1;
+
+//           stop1.setAttribute("offset", progress);
+//           stop2.setAttribute("offset", progress);
+
+//           if (progress < 1) {
+//             requestAnimationFrame(animateFill);
+//           }
+//         }
+
+//         requestAnimationFrame(animateFill);
+
+//         observer.unobserve(svg); // Run only once
+//       }
+//     });
+//   }, { threshold: 0.5 });
+
+//   observer.observe(svg);
+// })
+
 document.addEventListener("DOMContentLoaded", () => {
   const svg = document.getElementById("arrowSvg");
   const stop1 = document.getElementById("stop1");
   const stop2 = document.getElementById("stop2");
+  const section = document.getElementById("problemSection");
+
+  if (!svg || !stop1 || !stop2 || !section) return;
 
   // Reset initial state (no fill)
   stop1.setAttribute("offset", "0%");
   stop2.setAttribute("offset", "0%");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Animate gradient manually
-        let start = null;
-        const duration = 500; // 3s
+  const duration = 500; // ms
+  let started = false;
 
-        function animateFill(timestamp) {
-          if (!start) start = timestamp;
-          let progress = (timestamp - start) / duration;
-          if (progress > 1) progress = 1;
+  function startAnimation() {
+    if (started) return;
+    started = true;
 
-          stop1.setAttribute("offset", progress);
-          stop2.setAttribute("offset", progress);
+    let startTime = null;
 
-          if (progress < 1) {
-            requestAnimationFrame(animateFill);
-          }
-        }
+    function animateFill(timestamp) {
+      if (startTime === null) startTime = timestamp;
+      let progress = (timestamp - startTime) / duration;
+      if (progress > 1) progress = 1;
 
+      // Offsets must be percentages
+      const pct = (progress * 100) + "%";
+      stop1.setAttribute("offset", pct);
+      stop2.setAttribute("offset", pct);
+
+      if (progress < 1) {
         requestAnimationFrame(animateFill);
-
-        observer.unobserve(svg); // Run only once
       }
-    });
-  }, { threshold: 0.5 });
+    }
 
-  observer.observe(svg);
-})
+    requestAnimationFrame(animateFill);
+  }
+
+  // Fire once when pointer enters the section
+  section.addEventListener("pointerenter", startAnimation, { once: true });
+
+  // Optional: also trigger for keyboard users (tabbing into the section)
+  section.addEventListener("focusin", startAnimation, { once: true });
+});
+
 
 // to play the gif once(how hoplon works section)
 document.addEventListener("DOMContentLoaded", () => {

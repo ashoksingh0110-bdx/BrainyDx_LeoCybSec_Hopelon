@@ -15,6 +15,13 @@ body {
   background-color: #170f3d;
 }
 
+.navbar {
+  background-color: #170F3DCC !important;
+  backdrop-filter: blur(5px)
+
+}
+
+
 /* for testing */
 .red {
   border: 1px solid red;
@@ -826,9 +833,10 @@ footer .certification p {
 }
 
 .hero-section .features-box .feature {
+  align-items: start;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   padding: 0 1.25rem;
   border-right: 2.5px solid var(--primary-300);
   position: relative;
@@ -1252,7 +1260,7 @@ footer .certification p {
 
 .benefit-card .left-tabs .tab {
   background: transparent;
-  border: 1px solid #5e54df;
+  border: 1px solid #7B68D9;
   color: #ccc;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -1263,9 +1271,10 @@ footer .certification p {
 }
 .left-tabs .tab.active,
 .benefit-cards-wrapper-m .left-tabs .tab.active {
-  background: #5e54df;
+  background: #7B68D9;
   color: #fff;
-  border-color: #5e54df;
+  /* border-color: #7B68D9; */
+  border-color: #7B68D9;
 }
 
 .benefit-card .card-content {
@@ -1292,6 +1301,11 @@ footer .certification p {
   width: 100%;
   padding-inline: 0.5rem;
   scroll-snap-type: x mandatory;
+
+
+  /* hide scroll bar in mobile view */
+  scrollbar-width: none;   
+  -ms-overflow-style: none;
 }
 
 .benefit-cards-wrapper-m .left-tabs > * {
@@ -1300,7 +1314,8 @@ footer .certification p {
 
 .benefit-cards-wrapper-m .left-tabs .tab {
   background: transparent;
-  border: 1px solid #444;
+  /* border: 1px solid #444; */
+  border: 1px solid #7B68D9;
   color: #ccc;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -1405,6 +1420,7 @@ footer .certification p {
   max-width: 292px;
   margin-bottom: 0;
   text-align: right;
+  text-decoration: underline !important;
 }
 .contact-us-section .info-box a {
   color: var(--text-gray-300);
@@ -1726,6 +1742,8 @@ footer .certification p {
   justify-content: center;
   align-items: center;
   margin-bottom: 7.5rem;
+  
+  backdrop-filter: blur(5px);
 }
 /* Root container */
 .how-hoplon-works {
@@ -1768,6 +1786,7 @@ footer .certification p {
   margin-bottom: 2.5rem;
   width: 100%;
   padding: 1rem;
+  backdrop-filter: blur(5px) !important;
 }
 
 .how-hoplon-works .title-box h2,
@@ -1775,6 +1794,7 @@ footer .certification p {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 10px;
+  /* backdrop-filter: blur(5px) !important; */
 }
 .howhoplon-gif {
   position: relative;
@@ -1896,11 +1916,14 @@ footer .certification p {
 }
 
 @media (max-width: 575px) {
+  .section-badge {
+    font-size: 12px;
+  }
   h1 {
     font-size: 2.5rem;
   }
   h2 {
-    font-size: 1.825rem;
+    font-size: 24px;
   }
   h3 {
     font-size: 1.5rem;
@@ -1924,6 +1947,7 @@ footer .certification p {
   }
   .section-heading {
     font-size: var(--font-xl);
+    line-height: 36px;
   }
   .section-content {
     font-size: var(--font-base);
@@ -1973,7 +1997,8 @@ footer .certification p {
     min-height: 100%;
   }
   .hero-section .heading {
-    font-size: 2.25rem;
+    font-size: 36px;
+    line-height: 48px;
   }
   .hero-section .para-content {
     font-size: 1rem;
@@ -1983,7 +2008,7 @@ footer .certification p {
   }
   .hero-section .features-box .feature {
     margin: 0;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     border-right: none;
     border-bottom: 2px solid var(--primary-300);
   }
@@ -2164,6 +2189,17 @@ footer .certification p {
   p {
     font-size: 0.825rem;
   }
+  .contactUsHeading {
+    font-family: 24px !important;
+    line-height: 36px;
+  }
+
+  /* .contact-us-section .right-col h2 {
+    font-size: 24px !important;
+    line-height: 36px !important;
+  } */
+
+  
   .container {
     max-width: 100%;
     padding: 0;
