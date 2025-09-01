@@ -1,3 +1,14 @@
+<?php if (isset($_GET['submitted']) && $_GET['submitted'] === '1'): ?>
+<script>
+  alert('Thank you for submitting the form');
+</script>
+<?php elseif (isset($_GET['submitted']) && $_GET['submitted'] === '0'): ?>
+<script>
+  alert('Sorry, something went wrong. Please try again.');
+</script>
+<?php endif; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -879,12 +890,12 @@
                 needs.
               </p>
 
-              <form>
+              <form method="POST" action="./backend/contactForm.php">
                 <div class="row gap-24">
                   <div class="col-md-6">
                     <div class="form-grp">
                       <label for="fname">First Name</label>
-                      <input id="fname" name="fname" type="text" placeholder="First Name" />
+                      <input id="fname" name="fname" type="text" placeholder="First Name" required/>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -896,7 +907,7 @@
                   <div class="col-md-6">
                     <div class="form-grp">
                       <label for="email">Email</label>
-                      <input id="email" name="email" type="email" placeholder="Email" />
+                      <input id="email" name="email" type="email" placeholder="Email" required/>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -908,7 +919,7 @@
                   <div class="col-12">
                     <div class="form-grp">
                       <label for="message">Message</label>
-                      <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                      <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
                     </div>
                   </div>
                   <div class="col-12">
