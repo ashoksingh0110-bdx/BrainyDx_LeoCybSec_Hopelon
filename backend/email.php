@@ -2,27 +2,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/../vendor/autoload.php';
-
-/* ---------- Bootstrap ---------- */
-$projectRoot = realpath(dirname(__DIR__));
-$dotenv = Dotenv\Dotenv::createImmutable($projectRoot);
-$dotenv->load();
-
-date_default_timezone_set($_ENV['TIMEZONE'] ?? 'Europe/London');
-
-/* ---------- Helpers ---------- */
-function envv(string $key, $default = null) {
-    if (isset($_ENV[$key])) return $_ENV[$key];
-    if (isset($_SERVER[$key])) return $_SERVER[$key];
-    $v = getenv($key);
-    return $v !== false ? $v : $default;
-}
-function h(?string $v): string {
-    return htmlspecialchars($v ?? '', ENT_QUOTES, 'UTF-8');
-}
-
-/* ---------- Mail Core ---------- */
 function createMailer(): PHPMailer {
     $m = new PHPMailer(true);
     $m->isSMTP();
@@ -53,7 +32,6 @@ function sendMail(string $toEmail, string $toName, string $subject, string $html
     }
 }
 
-/* ---------- Templating ---------- */
 function adminBody(array $data): string {
     $ts = date('d-M-Y h:i A');
     return '
@@ -88,7 +66,6 @@ function userBody(array $data): string {
     ';
 }
 
-/* ---------- Public APIs ---------- */
 function adminEmail(array $data): bool {
     $subject = 'New Contact Form Query';
     $html = adminBody($data);

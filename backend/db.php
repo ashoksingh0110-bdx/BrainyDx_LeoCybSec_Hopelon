@@ -2,10 +2,10 @@
 
 class db {
     public static function open() {
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $databaseName = "leo_cybsec";
+        $host = envv('DATABASE_HOST');
+        $username = envv('DATABASE_USERNAME');
+        $password = envv('DATABASE_PASSWORD');
+        $databaseName = envv('DATABASE_NAME');
 
         $conn = mysqli_connect($host, $username, $password, $databaseName) or die("Could not connect to the database");
 

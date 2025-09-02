@@ -1,8 +1,9 @@
 <?php
 
-require ('db.php');
-require ('constants.php');
-require ('email.php');
+require './bootstrap.php';
+require './constants.php';
+require './db.php';
+require './email.php';
 
 $name = $phone = $email = $message = "";
 
