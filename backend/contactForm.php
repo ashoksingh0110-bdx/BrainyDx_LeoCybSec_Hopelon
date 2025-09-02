@@ -47,9 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $okAdmin = adminEmail($data);
         $okUser  = userEmail($data);
 
-        $target = dirname($_SERVER['SCRIPT_NAME']) . '/../index.php';
-        $status = $okAdmin ? 'submitted=1' : 'submitted=0';
-        header('Location: ' . $target . '?' . $status);
+        $target = dirname($_SERVER['SCRIPT_NAME']) . '/../thank-you.php';
+        header('Location: ' . $target);
         exit;
         
     } else {
@@ -57,7 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     db::close($conn);
-
 }
 else {
     die("Crash landing!");

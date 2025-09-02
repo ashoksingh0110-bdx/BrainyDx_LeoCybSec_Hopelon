@@ -1,0 +1,65 @@
+
+  <!-- Footer -->
+  <!-- <div id="footer"></div> -->
+  <!-- footer.html -->
+  <footer class="footer-section section-padding">
+    <div class="container">
+      <div class="row text-center text-md-start align-items-center">
+        <!-- Logo and Copyright -->
+        <div class="col-md-4 mb-4 mb-md-0" align="left">
+          <img src="./assets/images/footer-logo.png" alt="Hoplon Logo" class="footer-logo mb-2" />
+          <p class="mb-0 copyright-text d-none d-md-block">
+            © <span class="currentYear"></span> All Rights Reserved
+          </p>
+        </div>
+
+        <!-- Certifications -->
+        <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-between justify-content-md-start">
+          <div
+            class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start">
+            <img src="./assets/images/iso.png" alt="ISO27001" class="cert-icon me-2" />
+            <p class="mb-0"><em>ISO27001 Certified</em></p>
+          </div>
+          <div
+            class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start">
+            <img src="./assets/images/crest.png" alt="CREST" class="cert-icon me-2" />
+            <p class="mb-0"><em>CREST Certified</em></p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-between">
+          <!-- Email -->
+          <div>
+            <p class="email-label">
+              <img src="./assets/icons/mail.png" alt="mail" /> EMAIL
+            </p>
+            <a href="mailto:info@leocybsec.com" class="email-link">info@leocybsec.com</a>
+          </div>
+
+          <!-- Socials -->
+          <div class="social-list">
+            <p class="socials-label">SOCIALS</p>
+            <a href="https://www.linkedin.com/company/leo-cybsec" target="_blank" class="social-icon me-2">
+              <img src="./assets/icons/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://x.com/lcybsec" target="_blank" class="social-icon">
+              <img src="./assets/icons/x.png" alt="X" />
+            </a>
+          </div>
+        </div>
+        <p class="mb-0 copyright-text d-block d-md-none text-start">
+          © <span class="currentYear"></span> All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

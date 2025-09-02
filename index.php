@@ -1,70 +1,4 @@
-<?php if (isset($_GET['submitted']) && $_GET['submitted'] === '1'): ?>
-<script>
-  alert('Thank you for submitting the form');
-</script>
-<?php elseif (isset($_GET['submitted']) && $_GET['submitted'] === '0'): ?>
-<script>
-  alert('Sorry, something went wrong. Please try again.');
-</script>
-<?php endif; ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
-  <title>Hoplon AI</title>
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Slick CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
-  <!-- jQuery (Required) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Slick JS -->
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- cache images -->
-  <link rel="preload" as="image" href="./assets/images/benefits-bg.webp" type="image/webp">
-  <link rel="preload" as="image" href="./assets/images/bg-features-section.webp" type="image/webp">
-</head>
-
-<body>
-  <!-- Header inside Hero -->
-  <!-- <div id="header"></div> -->
-  <nav class="navbar navbar-expand-lg header">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="./assets/images/logo.png" alt="Tech Prodigy Logo" class="logo" />
-      </a>
-
-      <!-- Navbar Toggle (small screens only) -->
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#demoOffcanvas"
-        aria-controls="demoOffcanvas">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Buttons -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <div class="d-flex gap-2 mt-3 mt-lg-0">
-          <a href="#" class="btn btn-secondary">Start Free Trial</a>
-          <a href="#contact-us" class="btn btn-primary">Enquire Now</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
+<?php require ("./partials/header.php"); ?>
 
   <!-- Main Content -->
   <main class="home-page">
@@ -111,7 +45,7 @@
         </div>
         <!-- CTA Buttons -->
         <div class="d-block d-lg-flex justify-content-center gap-3 flex-wrap">
-          <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary w-100 w-lg-fit mb-3 mb-lg-0">BOOK A DEMO</a>
+          <a href="#contact-us" class="btn btn-secondary w-100 w-lg-fit mb-3 mb-lg-0">BOOK A DEMO</a>
           <a href="#contact-us" class="btn btn-primary w-100 w-lg-fit">ENQUIRE NOW</a>
         </div>
 
@@ -311,7 +245,7 @@
                 <img src="./assets/images/2.webp" alt="Compliance Readiness Image" class="img-fluid" />
               </div>
               <div id="assistant" class="content-section pb-3">
-                <img src="./assets/images/your-security-partner.gif" alt="AI Assistant Image" class="img-fluid" />
+                <img src="./assets/images/your-security-partner-.gif" alt="AI Assistant Image" class="img-fluid" />
               </div>
               <div id="platform" class="content-section pb-3">
                 <img src="./assets/images/3.webp" alt="Platform Image" class="img-fluid" />
@@ -490,7 +424,7 @@
                     need, making cybersecurity affordable for SMBs and
                     lowering costs.
                   </p>
-                  <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">BOOK A DEMO
+                  <a href="#contact-us"  class="btn btn-secondary">BOOK A DEMO
                     <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" /></a>
                 </div>
               </div>
@@ -517,7 +451,7 @@
                     Skip the complexity. Our streamlined setup gets your
                     entire organization protected in 10 minutes, not 10 days.
                   </p>
-                  <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">BOOK A DEMO
+                  <a href="#contact-us"  class="btn btn-secondary">BOOK A DEMO
                     <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" /></a>
                 </div>
               </div>
@@ -546,7 +480,7 @@
                     generating real-time reports across standards like ISO
                     27001, GDPR, and NIS2.
                   </p>
-                  <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">BOOK A DEMO
+                  <a href="#contact-us"  class="btn btn-secondary">BOOK A DEMO
                     <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" /></a>
                 </div>
               </div>
@@ -575,7 +509,7 @@
                     behavior—delivering accurate, actionable insights right to
                     your preferred channels.
                   </p>
-                  <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">BOOK A DEMO
+                  <a href="#contact-us"  class="btn btn-secondary">BOOK A DEMO
                     <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" /></a>
                 </div>
               </div>
@@ -612,7 +546,7 @@
                         you need, making cybersecurity affordable for SMBs and
                         lowering costs.
                       </p>
-                      <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">
+                      <a href="#contact-us"  class="btn btn-secondary">
                         BOOK A DEMO
                         <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" />
                       </a>
@@ -637,7 +571,7 @@
                       <p>
                         Skip the complexity. Our streamlined setup gets your entire organization protected in 10 minutes, not 10 days.
                       </p>
-                      <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">
+                      <a href="#contact-us"  class="btn btn-secondary">
                         BOOK A DEMO
                         <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" />
                       </a>
@@ -662,7 +596,7 @@
                       <p>
                         Hoplon automates the entire compliance lifecycle—monitoring controls, collecting evidence, and generating real-time reports across standards like ISO 27001, GDPR, and NIS2.
                       </p>
-                      <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">
+                      <a href="#contact-us"  class="btn btn-secondary">
                         BOOK A DEMO
                         <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" />
                       </a>
@@ -687,7 +621,7 @@
                       <p>
                         We leverage advanced AI to continuously correlate data across endpoints, cloud, email, and user behavior—delivering accurate, actionable insights right to your preferred channels.
                       </p>
-                      <a href="https://leocybsec.com/book-a-demo/" target="_blank" class="btn btn-secondary">
+                      <a href="#contact-us"  class="btn btn-secondary">
                         BOOK A DEMO
                         <img class="icon end" src="./assets/icons/arrow-right.png" alt="arrow" />
                       </a>
@@ -1042,7 +976,7 @@
                   on a mission to safeguard digital landscapes.
                 </p>
                 <div class="cta-buttons mt-4 gap-3">
-                  <a href="#" class="btn btn-secondary me-3">START TODAY</a>
+                  <a href="https://app.leocybsec.com/" target="_blank" class="btn btn-secondary me-3">START TODAY</a>
                   <a href="#contact-form" class="btn btn-primary">TALK TO SALES</a>
                 </div>
               </div>
@@ -1347,67 +1281,4 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <!-- <div id="footer"></div> -->
-  <!-- footer.html -->
-  <footer class="footer-section section-padding">
-    <div class="container">
-      <div class="row text-center text-md-start align-items-center">
-        <!-- Logo and Copyright -->
-        <div class="col-md-4 mb-4 mb-md-0" align="left">
-          <img src="./assets/images/footer-logo.png" alt="Hoplon Logo" class="footer-logo mb-2" />
-          <p class="mb-0 copyright-text d-none d-md-block">
-            © <span class="currentYear"></span> All Rights Reserved
-          </p>
-        </div>
-
-        <!-- Certifications -->
-        <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-between justify-content-md-start">
-          <div
-            class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start">
-            <img src="./assets/images/iso.png" alt="ISO27001" class="cert-icon me-2" />
-            <p class="mb-0"><em>ISO27001 Certified</em></p>
-          </div>
-          <div
-            class="certification d-flex flex-column align-items-center justify-content-center justify-content-md-start">
-            <img src="./assets/images/crest.png" alt="CREST" class="cert-icon me-2" />
-            <p class="mb-0"><em>CREST Certified</em></p>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4 mb-md-0 d-flex justify-content-between">
-          <!-- Email -->
-          <div>
-            <p class="email-label">
-              <img src="./assets/icons/mail.png" alt="mail" /> EMAIL
-            </p>
-            <a href="mailto:info@leocybsec.com" class="email-link">info@leocybsec.com</a>
-          </div>
-
-          <!-- Socials -->
-          <div class="social-list">
-            <p class="socials-label">SOCIALS</p>
-            <a href="https://www.linkedin.com/company/leo-cybsec" target="_blank" class="social-icon me-2">
-              <img src="./assets/icons/linkedin.png" alt="LinkedIn" />
-            </a>
-            <a href="https://x.com/lcybsec" target="_blank" class="social-icon">
-              <img src="./assets/icons/x.png" alt="X" />
-            </a>
-          </div>
-        </div>
-        <p class="mb-0 copyright-text d-block d-md-none text-start">
-          © <span class="currentYear"></span> All Rights Reserved
-        </p>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS -->
-  <script src="./assets/js/scripts.js"></script>
-</body>
-
-</html>
+<?php require ("./partials/footer.php"); ?>
