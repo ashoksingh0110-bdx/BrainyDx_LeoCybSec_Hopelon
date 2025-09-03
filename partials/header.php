@@ -48,7 +48,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <div class="d-flex gap-2 mt-3 mt-lg-0">
           <a href="https://app.leocybsec.com/" target="_blank" class="btn btn-secondary">Start Free Trial</a>
-          <a href="#contact-us" class="btn btn-primary">Enquire Now</a>
+          <a href="index.php#contact-us" class="btn btn-primary">Enquire Now</a>
         </div>
       </div>
     </div>
