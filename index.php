@@ -46,7 +46,7 @@
         <!-- CTA Buttons -->
         <div class="d-block d-lg-flex justify-content-center gap-3 flex-wrap">
           <a href="#contact-us" class="btn btn-secondary w-100 w-lg-fit mb-3 mb-lg-0">BOOK A DEMO</a>
-          <a href="#contact-us" class="btn btn-primary w-100 w-lg-fit">ENQUIRE NOW</a>
+          <a href="https://hoplon-ai.com/" target="_blank" class="btn btn-primary w-100 w-lg-fit">KNOW MORE</a>
         </div>
 
         <!-- Features -->
